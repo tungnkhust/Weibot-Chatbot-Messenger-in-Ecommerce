@@ -136,3 +136,5 @@ dmypy.json
 # model
 weibot/models
 tokens.txt
+results
+nlu-data

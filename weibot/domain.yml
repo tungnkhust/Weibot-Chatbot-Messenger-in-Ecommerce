@@ -2,32 +2,85 @@ version: "2.0"
 
 intents:
   - greet
-  - goodbye
-  - affirm
+  - bye
+  - agree
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - thank
+  - request_human
+  - request_help
+  - request_ask_question
+  - ask_is_bot
+  - ask_intro_overview
+  - self_ask_name
+  - self_ask_age
+  - self_ask_feature
+  - self_ask_gender
+  - request_product
+  - request_info
+  - request_image
+  - request_color
+  - request_price
+
+entities:
+  - color
+  - object_type
+  - price
+  - size
+  - gender
+
+
+slots:
+  greeted:
+    type: bool
+    influence_conversation: false
+    auto_fill: false
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_greet_0:
+    - text: "Chào bạn, mình là Lily trợ lý ảo của shop. Mình có thể giúp gì cho bạn ạ."
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_greet_1:
+    - text: "Bạn đang cần hỗ trợ gì ạ?"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_bye_0:
+    - text: "Cảm ơn bản đã ghé thăm shop, hẹn gặp lại bạn sau ạ."
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_thank_0:
+    - text: "Dạ, cảm ơn bạn nhé!"
 
-  utter_goodbye:
-  - text: "Bye"
+  utter_response_request_human:
+    - text: "Dạ bạn có thể gọi qua số: 098765888 để được tư vẫn trực tiếp ạ."
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_response_request_help:
+    - text: "Dạ, bạn cần giúp đỡ gì ạ?"
+
+  utter_response_request_question:
+    - text: "Dạ, bạn muốn hỏi gì ạ?"
+
+  utter_is_bot:
+    - text: "Dạ, mình là trợ lý ảo Lily, hỗ trợ shop bán hàng ạ."
+
+  utter_self_intro:
+    - text: "Mình là trợ lý ảo Lily, có được xây dựng để hỗ trợ shop bán hàng.\n
+            Mình có thể hỗ trợ bán tìm kiếm sản phẩm mong muốn và chốt đơn hàng ạ.
+            Ngoài ra mình cũng có thể trả lời một số thông tin cá nhân ạ."
+  utter_ask_name:
+    - text: "Mình tên là Lily. Tên một loài hoa huệ xinh đẹp ạ."
+
+  utter_ask_age:
+    - text: "Mình được hơn 1 tuổi rồi ạ."
+
+  utter_ask_feature:
+    - text: "Mình có thể hỗ trợ bán tìm kiếm sản phẩm mong muốn và chốt đơn hàng ạ.
+            Ngoài ra mình cũng có thể trả lời một số thông tin cá nhân ạ."
+
+  utter_ask_gender:
+    - text: "Mình là nữ ạ."
+
+
+actions:
+  - action_greet
+  - action_reset_slots
 
 session_config:
   session_expiration_time: 60
