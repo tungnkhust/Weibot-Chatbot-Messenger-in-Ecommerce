@@ -28,7 +28,7 @@
 
   ```bash
   # Window PowerShell
-  ./.venv/bin/Activate.ps1
+  ./.venv/Scripts/Activate.ps1
 
   # Linux
   source ./.venv/bin/activate
