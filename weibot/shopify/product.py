@@ -1,0 +1,124 @@
+import json
+from config import APP_PASSWORD, SHOP_URL, API_VERSION
+import shopify
+
+def _build_query(sex,product_type,min_price,max_price)->str:
+    query = ""
+
+    if sex != None:
+        if len(query) > 0:
+            query += " AND "
+        query += f"tag:{sex}"
+    
+    if product_type != None:
+        if len(query) > 0:
+            query += " AND "
+        query += f"tag:{product_type}"
+
+    if min_price != None:
+        if len(query) > 0:
+            query += " AND "
+        query += f"price:>={min_price}"
+
+    if max_price != None:
+        if len(query) > 0:
+            query += " AND "
+        query += f"price:<={max_price}"
+
+    return query
+
+def getProductVariants():
+    with shopify.Session.temp(SHOP_URL, API_VERSION, APP_PASSWORD): 
+        response = shopify.GraphQL().execute(
+            """
+            {
+                productVariants(first: 10) {
+                    edges {
+                        node {
+                            id
+                            displayName
+                            inventoryQuantity
+                            price
+                            selectedOptions {
+                                name
+                                value
+                            }
+                            product {
+                                handle
+                                title
+                                vendor
+                                description
+                                productType
+                                tags
+                                images(first: 1) {
+                                    edges {
+                                        node {
+                                            src
+                                        }
+                                    }
+                                }
+                            }
+                            image {
+                                src
+                                altText
+                            }
+                        }
+                    }
+                }
+            }
+
+            """
+        )
+
+        return json.loads(response)["data"]["productVariants"]["edges"]
+
+def getProducts(sex=None,product_type=None,min_price=None,max_price=None):
+    with shopify.Session.temp(SHOP_URL, API_VERSION, APP_PASSWORD):
+        
+        query = _build_query(sex,product_type,min_price,max_price)
+        
+        response = shopify.GraphQL().execute(
+            f"""
+            {{
+                products(first: 2, query:"{query}") {{
+                    edges {{
+                        node {{
+                            id
+                            handle
+                            title
+                            tags
+                            totalInventory
+                            productType
+                            description
+                            priceRangeV2 {{
+                                minVariantPrice {{
+                                    amount
+                                }}
+                                maxVariantPrice {{
+                                    amount
+                                }}
+                            }}
+                            options(first: 3) {{
+                                name
+                                values
+                            }}
+                            vendor
+                            images(first: 1) {{
+                                edges {{
+                                    node {{
+                                        src
+                                        altText
+                                    }}
+                                }}
+                            }}
+                        }}
+                    }}
+                }}
+            }}
+            """
+        )
+        
+        return json.loads(response)["data"]["products"]["edges"]
+
+if __name__ == "__main__":
+    print(getProducts(product_type="áo thun", min_price=400000, max_price=800000))
