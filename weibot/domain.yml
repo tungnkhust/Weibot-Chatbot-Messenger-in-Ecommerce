@@ -81,6 +81,7 @@ responses:
 actions:
   - action_greet
   - action_reset_slots
+  - action_request_product
 
 session_config:
   session_expiration_time: 60

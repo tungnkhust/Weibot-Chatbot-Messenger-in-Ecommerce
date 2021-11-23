@@ -30,7 +30,7 @@ rules:
   - rule: request_ask_question
     steps:
     - intent: request_ask_question
-    - action: utter_response_request_human
+    - action: utter_response_request_question
 
   - rule: ask_is_bot
     steps:
@@ -61,3 +61,9 @@ rules:
     steps:
     - intent: self_ask_gender
     - action: utter_ask_gender
+
+  - rule: request_product
+    steps:
+    - intent: request_product
+    - action: action_request_product
+

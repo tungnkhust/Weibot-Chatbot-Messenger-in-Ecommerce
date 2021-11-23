@@ -10,9 +10,9 @@ class ActionGreet(Action):
     def name(self) -> Text:
         return "action_reset_slots"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    async def run(self, dispatcher: CollectingDispatcher,
+                  tracker: Tracker,
+                  domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         slots = [
             SlotSet(key="greeted", value=False)
