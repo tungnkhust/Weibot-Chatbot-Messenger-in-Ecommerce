@@ -1,13 +1,69 @@
 version: "2.0"
 
 rules:
+  - rule: greet
+    steps:
+    - intent: greet
+    - action: action_greet
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: bye
+    steps:
+      - intent: bye
+      - action: utter_bye_0
+      - action: action_reset_slots
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - rule: thank
+    steps:
+    - intent: thank
+    - action: utter_thank_0
+
+  - rule: request_human
+    steps:
+    - intent: request_human
+    - action: utter_response_request_human
+
+  - rule: request_help
+    steps:
+    - intent: request_help
+    - action: utter_response_request_help
+
+  - rule: request_ask_question
+    steps:
+    - intent: request_ask_question
+    - action: utter_response_request_question
+
+  - rule: ask_is_bot
+    steps:
+    - intent: ask_is_bot
+    - action: utter_is_bot
+
+  - rule: ask_intro_overview
+    steps:
+    - intent: ask_intro_overview
+    - action: utter_self_intro
+
+  - rule: self_ask_name
+    steps:
+    - intent: self_ask_name
+    - action: utter_ask_name
+
+  - rule: self_ask_age
+    steps:
+    - intent: self_ask_age
+    - action: utter_ask_age
+
+  - rule: self_ask_feature
+    steps:
+    - intent: self_ask_feature
+    - action: utter_ask_feature
+
+  - rule: self_ask_gender
+    steps:
+    - intent: self_ask_gender
+    - action: utter_ask_gender
+
+  - rule: request_product
+    steps:
+    - intent: request_product
+    - action: action_request_product
+

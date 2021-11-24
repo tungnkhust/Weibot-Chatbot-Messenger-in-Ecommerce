@@ -1,92 +1,1893 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
-    - hey
+    - alo
+    - alo alo
+    - alo alo alo
+    - alo anh
+    - alo chị
+    - alo cậu
+    - alo em
+    - alo, em ơii
+    - alo, em ới
+    - alo, shop ơi
+    - anh ơi
+    - buổi chiều tốt lành
+    - buổi sáng tốt lành
+    - buổi tối tốt lành
+    - bạn ơii
+    - chào
+    - chào anh
+    - chào buổi chiều
+    - chào buổi sáng
+    - chào buổi sáng bạn
+    - chào buổi sáng cậu
+    - chào buổi sáng em
+    - chào buổi sáng lily
+    - chào buổi trưa
+    - chào buổi tối
+    - chào shop
+    - chào, anh ơi
+    - chào, bạn ơii
+    - cậu ơi
+    - cậu ơii
+    - cậu ới
+    - e chào lily
+    - e xin chào anh
+    - e xin chào chị ạ
+    - em chào anh
+    - em chào anh ạ
+    - em chào bạn
+    - em chào lily ạ
+    - em xin chào bạn
+    - em xin chào cậu nha
+    - em xin chào lily
+    - em ới
+    - halo
+    - halo anh
+    - halo bạn
+    - halo cậu
+    - halo shop
+    - halo, bạn ới
+    - halo, shop ơi
     - hello
+    - hello bạn
+    - hello chị
+    - hello em
+    - hello hello
+    - hello, bạn ơi
+    - hello, bạn ơii
+    - hello, cậu ơii
+    - helo
+    - helo em
+    - helo helo
+    - helo, anh ơi
+    - helo, bạn ới
+    - helo, cậu ơi
     - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
-- intent: goodbye
+    - hi bạn
+    - hi hi
+    - hi shop
+    - hi, anh ới
+    - hi, bạn ới
+    - hi, cậu ơi
+    - hi, shop ơii
+    - lily ơi
+    - lily ới
+    - mình chào bạn
+    - mình chào shop ạ
+    - mình xin chào bạn
+    - mình xin chào cậu
+    - mình xin chào cậu nha
+    - mình xin chào cậu nhé
+    - mình xin chào lily nhé
+    - mình xin chào shop ạ
+    - ngày mới tốt lành
+    - shop ơii
+    - tớ chào anh ạ
+    - tớ chào chị ạ
+    - tớ chào em
+    - tớ xin chào bạn
+    - tớ xin chào chị ạ
+    - tớ xin chào cậu
+    - tớ xin chào lily
+    - xin chào
+    - xin chào buổi sáng
+    - xin chào buổi sáng cậu
+    - xin chào buổi sáng em
+    - xin chào buổi sáng shop
+    - xin chào xin chào
+    - xin chào, cậu ới
+    - ơi
+    - ơii
+    - ới
+- intent: bye
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
+    - bi bi
+    - bi bi anh nhé
+    - bi bi bạn
+    - bi bi bạn nhé
+    - bi bi chị nha
+    - bi bi cậu
+    - bi bi cậu nha
+    - bi bi cậu nhé
+    - bi bi lily
+    - bi bi lily nhé
+    - bi bi nha
+    - bi bi nhé
+    - bi bi shop nha
+    - bi bi shop nhé
     - bye
-    - goodbye
-    - have a nice day
-    - see you around
+    - bye anh
     - bye bye
-    - see you later
-
-- intent: affirm
+    - bye bye bạn
+    - bye bye bạn nha
+    - bye bye chị
+    - bye bye chị nhé
+    - bye bye cậu
+    - bye bye cậu nhé
+    - bye bye em
+    - bye bye lily nha
+    - bye bye nha
+    - bye bye nhé
+    - bye cậu hẹn gặp lại sau nha
+    - bye em nha
+    - bye gặp lại sau nha
+    - bye gặp lại sau nhé
+    - bye lily hẹn gặp lại
+    - bye lily nhé
+    - bye lily see you
+    - bye lily see you nha
+    - bye nha
+    - bye see you again nha
+    - bye shop see you again
+    - chào tạm biệt
+    - chào tạm biệt bạn hẹn gặp lại sau
+    - chào tạm biệt bạn hẹn gặp lại sau nhé
+    - chào tạm biệt bạn nha
+    - chào tạm biệt chị nhé
+    - chào tạm biệt chị see you nhé
+    - chào tạm biệt cậu nhé
+    - chào tạm biệt cậu see you again nhé
+    - chào tạm biệt em nói chuyện sau nha
+    - chào tạm biệt hẹn gặp lại nhé
+    - chào tạm biệt lily
+    - chào tạm biệt lily gặp lại sau
+    - chào tạm biệt lily nha
+    - chào tạm biệt nha
+    - chào tạm biệt nhé
+    - chào tạm biệt nói chuyện sau nha
+    - chào tạm biệt shop
+    - good bye
+    - good bye bạn
+    - good bye chị gặp lại sau nhé
+    - good bye chị hẹn gặp lại
+    - good bye chị see you
+    - good bye lily
+    - good bye lily nhé
+    - good bye nhé
+    - good bye see you again
+    - good bye see you again nhé
+    - good bye shop gặp lại sau nha
+    - gặp lại sau
+    - gặp lại sau nha
+    - gặp lại sau nhé
+    - hẹn gặp lại
+    - hẹn gặp lại nha
+    - hẹn gặp lại nhé
+    - hẹn gặp lại sau
+    - hẹn gặp lại sau nha
+    - hẹn gặp lại sau nhé
+    - nói chuyện sau
+    - nói chuyện sau nha
+    - see you
+    - see you again
+    - see you again nha
+    - see you again nhé
+    - see you nha
+    - see you nhé
+    - tạm biệt
+    - tạm biệt anh
+    - tạm biệt bạn
+    - tạm biệt bạn nha
+    - tạm biệt bạn nhé
+    - tạm biệt cậu
+    - tạm biệt cậu hẹn gặp lại sau
+    - tạm biệt cậu nha
+    - tạm biệt em nha
+    - tạm biệt gặp lại sau
+    - tạm biệt hẹn gặp lại
+    - tạm biệt hẹn gặp lại nhé
+    - tạm biệt nha
+    - tạm biệt nhé
+    - tạm biệt nói chuyện sau nha
+    - tạm biệt see you
+    - tạm biệt see you again nhé
+- intent: agree
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
+    - chuẩn r
+    - chuẩn r chị
+    - chuẩn rồi em
+    - chính xác r
+    - chính xác r anh
+    - chính xác r bạn
+    - chính xác r chị
+    - chính xác r cậu
+    - chính xác rồi
+    - ok bạn
+    - okay
+    - okay nha
+    - oke
+    - oke nha cậu
+    - oke nhé
+    - okee
+    - okee cậu
+    - okee nha
+    - okee nhé
+    - okee nhé chị
+    - okela
+    - okela cậu
+    - okela lily
+    - okela nhé
+    - okela shop
+    - oki
+    - oki bạn
+    - oki cậu
+    - oki em
+    - oki nha
+    - oki nha chị
+    - oki nha shop
+    - oki nhé
+    - oki nhé anh
+    - oki nhé cậu
+    - oki nhé em
+    - oki shop
+    - okie
+    - okie cậu
+    - okie nha
+    - okii chị
+    - okii nha
+    - okii nha cậu
+    - okii nhé
+    - okii nhé shop
+    - okila
+    - okila chị
+    - okila cậu
+    - okila nha
+    - okila nha chị
+    - okla
+    - okla nha
+    - okla nhé
+    - ooke nha shop
+    - ooke nhé em
+    - phải r cậu
+    - phải rồi
+    - phải rồi anh
+    - uh chuẩn rồi
+    - uh chính xác r
+    - uh chính xác r chị
+    - uh chính xác r em
+    - uh ok
+    - uh okay lily
+    - uh oke lily
+    - uh okee cậu
+    - uh okela
+    - uh okla shop
+    - uh đúng r
+    - uh đúng rồi anh
+    - uhm chính xác rồi
+    - uhm chính xác rồi cậu
+    - uhm oke chị
+    - uhm oki
+    - uhm oki em
+    - uhm okie
+    - uhm okla chị
+    - đúng r
+    - đúng r anh
+    - đúng r bạn
+    - đúng rồi
+    - đúng rồi cậu
+    - đúng rồi lily
+    - đúng rồi shop
+    - ưh chuẩn rồi
+    - ưh oke
+    - ưh okila anh
+    - ưhm oki chị
+    - ưhm ooke lily
+    - ừ oki
+    - ừ okii
+    - ừ okila lily
+    - ừ ooke
+    - ừ đúng r
+    - ừm chuẩn r chị
+    - ừm chuẩn rồi
+    - ừm chính xác r
+    - ừm oke
+    - ừm oki
+    - ừm okie cậu
+- intent: thank
+  examples: |
+    - em cảm ơn nhé
+    - thanks chị nha
+    - tớ cảm ơn cậu nha
+    - cảm ơn shop nhé
+    - thank you cậu nha
+    - vâng thak anh nhé
+    - thak shop nha
+    - vâng thak bạn nhé
+    - vâng thank bạn nha
+    - vâng thank you em nhé
+    - vâng thank em nhé
+    - thanks em nhé
+    - dạ thak chị ạ
+    - dạ thank ạ
+    - thank you chị nhé
+    - thanks anh nhé
+    - e cảm ơn bạn nhé
+    - tớ cảm ơn chị nhé
+    - thank
+    - thank nhé
+    - cảm ơn nhé
+    - vâng cảm ơn bạn nha
+    - vâng thak lily nha
+    - vâng thak lily nhé
+    - thank nha
+    - vâng thanks shop nha
+    - dạ thak lily ạ
+    - vô cùng cảm ơn chị ạ
+    - thak cậu nha
+    - dạ thank you ạ
+    - dạ cảm ơn anh ạ
+    - dạ thak em ạ
+    - vâng thak nhé
+    - em cảm ơn cậu nha
+    - dạ thanks anh ạ
+    - thank lily nha
+    - em cảm ơn shop nhé
+    - thank shop nhé
+    - e cảm ơn chị nha
+    - vâng thank you chị nha
+    - vâng cảm ơn chị nhé
+    - dạ cảm ơn lily ạ
+    - thank you nha
+    - thanks lily nhé
+    - thanks lily nha
+    - vâng cảm ơn bạn nhé
+    - dạ thank shop ạ
+    - mình cảm ơn lily nha
+    - cảm ơn chị nhé
+    - vâng thank you bạn nha
+    - vâng cảm ơn cậu nhé
+    - dạ thank lily ạ
+    - mình cảm ơn cậu nha
+    - vâng thank you chị nhé
+    - vâng thank you nhé
+    - vâng thank lily nhé
+    - mình cảm ơn bạn nha
+    - mình cảm ơn shop nha
+    - thanks
+    - thank you
+    - cảm ơn em nhé
+    - thank you shop nhé
+    - thank shop nha
+    - thank you anh nha
+    - thak lily nhé
+    - thanks cậu nhé
+    - dạ thanks ạ
+    - mình cảm ơn nha
+    - mình cảm ơn chị nha
+    - em cảm ơn lily nhé
+    - vâng thanks nhé
+    - mình cảm ơn em nhé
+    - thank anh nhé
+    - dạ thank you chị ạ
+    - dạ thank you shop ạ
+    - vâng cảm ơn lily nha
+    - thank anh nha
+    - vâng thak cậu nha
+    - thank em nha
+    - vô cùng cảm ơn ạ
+    - tớ cảm ơn nha
+    - em cảm ơn em nha
+    - vâng cảm ơn lily nhé
+    - thanks chị nhé
+    - thank bạn nhé
+    - thank you anh nhé
+    - cảm ơn em nha
+    - dạ cảm ơn em ạ
+    - thank you em nhé
+    - vâng cảm ơn cậu nha
+    - dạ thank cậu ạ
+    - vâng cảm ơn em nhé
+    - vô cùng cảm ơn em ạ
+    - tớ cảm ơn lily nhé
+    - thank em nhé
+    - dạ cảm ơn chị ạ
+    - dạ thak shop ạ
+    - cảm ơn bạn nhé
+    - vâng thank lily nha
+    - vâng thak cậu nhé
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
+    - chưa được nhầm r chị
+    - ko chính xác rồi
+    - ko sai rồi
+    - không phải nhầm lẫn r cậu
+    - no nhầm r cậu
+    - không được
+    - không được nhầm r chị
+    - không nhầm r chị
+    - không phải nhầm lẫn rồi shop
+    - không phải nhầm rồi chị
+    - không được, không chính xác đâu
+    - không được, ko đúng đâu
+    - ko nhầm r bạn
+    - không được nhầm r cậu
+    - no nhầm r chị
+    - không chính xác r
+    - không được nhầm lẫn rồi anh
+    - không nhé anh
+    - k cần
+    - k nhé
+    - không nhầm rồi
+    - chưa được sai r anh
+    - không, ko đúng đâu
+    - không, ko chuẩn đâu
+    - k chuẩn
+    - no nhầm r shop
+    - chưa được nhầm lẫn rồi
+    - không phải, không đúng đâu
+    - không, k phải đâu
+    - không nhầm rồi cậu
+    - không nhầm lẫn r cậu
+    - no nhầm r
+    - không phải nhầm lẫn rồi bạn
+    - ko nhầm rồi cậu
+    - ko chính xác
+    - k nhé bạn
+    - ko nhầm lẫn r cậu
+    - không được, không phải đâu
+    - không được sai rồi chị
+    - không phải, không chuẩn đâu
+    - không được sai rồi cậu
+    - không, k chuẩn đâu
+    - không phải sai r chị
+    - không phải nhầm rồi
+    - không phải sai rồi cậu
+    - không được nhầm rồi cậu
+    - không đúng rồi
+    - không phải nhầm rồi cậu
+    - ko nhầm rồi
+    - no, ko chuẩn đâu
+    - khỏi cần
+    - không nhầm lẫn rồi chị
+    - no sai r shop
+    - không, không chính xác đâu
+    - chưa được sai rồi chị
+    - không phải sai r anh
+    - no sai r bạn
+    - không chuẩn r
+    - không phải, ko đúng đâu
+    - không phải sai r bạn
+    - không được sai rồi
+    - ko nhầm lẫn r shop
+    - không được, k phải đâu
+    - ko
+    - không nhầm rồi shop
+    - ko nhé chị
+    - ko sai r anh
+    - không nhầm lẫn rồi bạn
+    - không, ko chính xác đâu
+    - không nhầm lẫn r shop
+    - không có
+    - không nhầm r bạn
+    - không cần
+    - không phải, không chính xác đâu
+    - không được nhầm rồi anh
+    - không phải, k chính xác đâu
+    - ko chuẩn r
+    - no sai r cậu
+    - không phải sai r cậu
+    - không phải nhầm lẫn rồi
+    - chưa được nhầm lẫn r bạn
+    - no, ko phải đâu
+    - no sai r chị
+    - ko đúng r
+    - ko nhầm lẫn r anh
+    - đừng nhé bạn
+    - chưa được nhầm lẫn rồi bạn
+    - chưa được sai r shop
+    - không được nhầm rồi bạn
+    - không được sai r chị
+    - no nhầm lẫn rồi bạn
+    - ko sai rồi bạn
+    - ko sai r chị
+    - ko nhầm lẫn rồi shop
+    - ko nhầm lẫn rồi anh
+    - k phải rồi
+    - chưa được, không chuẩn đâu
+    - không được sai r bạn
+    - không được, k chuẩn đâu
+    - không, không phải đâu
+- intent: request_human
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
+    - người vào ib đi
+    - em muốn nhắn tin với chủ shop
+    - chủ shop vào ib đi
+    - em muốn ib với human
+    - em muốn ib với admin
+    - cho tớ gặp nhân viên
+    - gặp ad được k
+    - gặp nhân viên được k
+    - cho gặp chủ shop được k
+    - tớ muốn nhắn tin với nhân viên
+    - chị chủ vào inbox đi
+    - cho em gặp admin
+    - em muốn gặp nhân viên
+    - admin vào inbox đi
+    - cho gặp human được k
+    - chuyển sang gặp nhân viên được không
+    - admin vào nhắn tin đi
+    - chuyển sang gặp human được không
+    - mình muốn ib với human
+    - gặp human được ko
+    - chuyển sang inbox với admin đi
+    - chuyển sang gặp admin được ko
+    - chuyển sang gặp ad được không
+    - chuyển sang ib với người đi
+    - ad vào inbox đi
+    - e muốn gặp chị chủ
+    - gặp chủ shop được không
+    - mình muốn ib với ad
+    - tớ muốn ib với ad
+    - cho em gặp human
+    - mình muốn gặp nhân viên
+    - tớ muốn gặp chủ shop
+    - cho tớ gặp ad
+    - chủ shop vào inbox đi
+    - e muốn ib với nhân viên
+    - tớ muốn inbox với nhân viên
+    - chuyển sang nhắn tin với admin đi
+    - nhân viên vào ib đi
+    - admin vào ib đi
+    - cho e gặp chị chủ
+    - tớ muốn ib với admin
+    - e muốn inbox với chủ shop
+    - gặp admin được k
+    - cho mình gặp chủ shop
+    - e muốn ib với người
+    - e muốn inbox với người
+    - em muốn inbox với nhân viên
+    - chuyển sang gặp chị chủ được không
+    - cho gặp người được không
+    - mình muốn inbox với chị chủ
+    - human vào nhắn tin đi
+    - chuyển sang chế độ ib với admin đi
+    - em muốn gặp chị chủ
+    - tớ muốn inbox với admin
+    - cho em gặp nhân viên
+    - chủ shop vào nhắn tin đi
+    - gặp admin được ko
+    - nhân viên vào nhắn tin đi
+    - chuyển sang chế độ nhắn tin với người đi
+    - chuyển sang gặp ad được k
+    - cho gặp chị chủ được ko
+    - mình cần gặp admin
+    - e muốn ib với admin
+    - tớ muốn inbox với chị chủ
+    - em muốn inbox với ad
+    - chuyển sang chế độ ib với nhân viên đi
+    - chuyển sang chế độ ib với chị chủ đi
+    - chuyển sang chế độ inbox với nhân viên đi
+    - gặp người được k
+    - e muốn ib với human
+    - tớ muốn nhắn tin với chủ shop
+    - cho mình gặp chị chủ
+    - mình muốn nhắn tin với chủ shop
+    - tớ cần gặp chủ shop
+    - e muốn inbox với nhân viên
+    - chuyển sang chế độ inbox với chủ shop đi
+    - chuyển sang nhắn tin với chị chủ đi
+    - tớ muốn nhắn tin với admin
+    - cho gặp người đi
+    - cho e gặp admin
+    - chuyển sang chế độ nhắn tin với chị chủ đi
+    - chuyển sang ib với ad đi
+    - cho e gặp ad
+    - chuyển sang gặp chủ shop được không
+    - e muốn gặp người
+    - cho gặp chủ shop được không
+    - cho em gặp chị chủ
+    - chuyển sang ib với chị chủ đi
+    - e muốn inbox với admin
+    - tớ muốn gặp người
+    - cho gặp admin được ko
+    - tớ cần gặp ad
+    - cho em gặp ad
+    - e muốn nhắn tin với chị chủ
+    - chuyển sang nhắn tin với nhân viên đi
+    - e muốn gặp nhân viên
+    - cho gặp admin đi
+    - em muốn inbox với chị chủ
+    - nhân viên vào inbox đi
+    - chuyển sang chế độ inbox với admin đi
+- intent: request_help
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
+    - anh có thể giúp đỡ mình được k
+    - anh có thể trợ giúp mình được k
+    - anh ơi, e cần giúp đỡ
+    - anh ơi, e cần hỗ trợ giúp đỡ em với
+    - anh ơi, tớ cần hỗ trợ hỗ trợ mình với
+    - bạn có thể giúp đỡ tớ được không
+    - bạn trợ giúp tớ việc này được không
+    - bạn ơi, e cần giúp
+    - bạn ơi, e cần hỗ trợ hỗ trợ tớ với
+    - bạn ơi, em cần hỗ trợ hỗ trợ e với
+    - bạn ơi, mình cần hỗ trợ hỗ trợ e với
+    - bạn ơi, tớ cần giúp đỡ
+    - bạn ơi, tớ cần hỗ trợ
+    - chị có thể hỗ trợ tớ được ko
+    - có thể giúp e được ko
+    - có thể giúp e được ko cậu
+    - có thể giúp em được k anh
+    - có thể giúp đỡ e được ko
+    - có thể giúp đỡ mình được ko
+    - có thể giúp đỡ tớ được k cậu
+    - có thể giúp đỡ tớ được không cậu
+    - có thể giúp đỡ tớ được ko
+    - có thể hỗ trợ e được không
+    - có thể hỗ trợ em được k
+    - có thể hỗ trợ em được ko
+    - có thể trợ giúp e được k bạn
+    - có thể trợ giúp e được không
+    - có thể trợ giúp em được ko
+    - có thể trợ giúp mình được k
+    - cậu có thể giúp đỡ em được không
+    - cậu trợ giúp e việc này được ko
+    - e cần giúp
+    - e cần giúp chỗ này hỗ trợ e với
+    - e cần giúp ơi
+    - e cần trợ giúp cậu ơi
+    - e cần trợ giúp ơi
+    - em có chuyện cần giúp chị ơi
+    - em có chuyện cần giúp lily ơi
+    - em có chuyện cần giúp shop ơi
+    - em có chuyện cần giúp ơi
+    - em cần giúp
+    - em cần giúp chỗ này giúp đỡ em với
+    - em cần giúp chỗ này hỗ trợ e với
+    - em cần giúp đỡ
+    - em cần trợ giúp
+    - em cần trợ giúp ơi
+    - em ơi, e cần hỗ trợ hỗ trợ e với
+    - em ơi, em cần hỗ trợ hỗ trợ em với
+    - em ơi, tớ cần hỗ trợ giúp mình với
+    - giúp e được k anh
+    - giúp em được không
+    - giúp mình với cậu ơi
+    - giúp mình với ơi
+    - giúp với
+    - giúp đỡ em được không cậu
+    - giúp đỡ mình với cậu ơi
+    - giúp đỡ mình với ơi
+    - giúp đỡ mình được k em
+    - giúp đỡ mình được ko bạn
+    - giúp đỡ tớ với shop ơi
+    - giúp đỡ tớ với ơi
+    - hỗ trợ e được ko em
+    - hỗ trợ em với ơi
+    - hỗ trợ mình với chị ơi
+    - hỗ trợ mình với shop ơi
+    - hỗ trợ mình được không
+    - hỗ trợ tớ được ko em
+    - hỗ trợ với
+    - lily ơi, tớ cần hỗ trợ giúp đỡ tớ với
+    - mình có chuyện cần giúp chị ơi
+    - mình có chuyện cần giúp ơi
+    - mình cần giúp
+    - mình cần giúp chỗ này hỗ trợ tớ với
+    - mình cần giúp đỡ bạn ơi
+    - mình cần hỗ trợ
+    - shop có thể giúp mình được k
+    - shop ơi, e cần hỗ trợ
+    - shop ơi, em cần hỗ trợ hỗ trợ mình với
+    - trợ giúp e được k chị
+    - trợ giúp em việc này được không
+    - trợ giúp em việc này được ko
+    - trợ giúp em với lily ơi
+    - trợ giúp em với ơi
+    - trợ giúp mình với ơi
+    - trợ giúp tớ với ơi
+    - trợ giúp tớ được không em
+    - trợ giúp với
+    - tớ cần giúp chỗ này giúp tớ với
+    - tớ cần giúp chỗ này hỗ trợ em với
+    - tớ cần giúp chỗ này trợ giúp mình với
+    - tớ cần giúp đỡ chị ơi
+    - tớ cần giúp đỡ ơi
+    - tớ cần hỗ trợ
+    - ơi, e cần hỗ trợ trợ giúp tớ với
+    - ơi, mình cần hỗ trợ giúp đỡ e với
+    - ơi, mình cần hỗ trợ giúp đỡ mình với
+    - ơi, mình cần hỗ trợ trợ giúp em với
+    - ơi, tớ cần hỗ trợ
+    - ơi, tớ cần hỗ trợ giúp đỡ e với
+    - ơi, tớ cần hỗ trợ hỗ trợ mình với
+- intent: request_ask_question
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - anh cho e hỏi chút được không
+    - anh cho em hỏi chút được ko
+    - bạn cho em hỏi chút được ko
+    - bạn cho tớ hỏi chút được ko
+    - cho e hỏi chút được k
+    - cho e hỏi chút được không
+    - cho e hỏi chút được không anh
+    - cho e hỏi chút được không cậu
+    - cho e hỏi chút được ko
+    - cho e hỏi chút được ko anh
+    - cho e hỏi được k
+    - cho e hỏi được không
+    - cho e đặt câu hỏi với
+    - cho em hỏi chút được k
+    - cho em hỏi chút được k bạn
+    - cho em hỏi chút được k chị
+    - cho em hỏi chút được không
+    - cho em hỏi chút được ko
+    - cho em hỏi chút được ko shop
+    - cho em hỏi được k
+    - cho em hỏi được không
+    - cho em hỏi được ko
+    - cho em đặt câu hỏi với
+    - cho mình hỏi chút được k
+    - cho mình hỏi chút được k bạn
+    - cho mình hỏi chút được không
+    - cho mình hỏi chút được không cậu
+    - cho mình hỏi chút được không lily
+    - cho mình hỏi chút được không shop
+    - cho mình hỏi chút được ko
+    - cho mình hỏi được k
+    - cho mình hỏi được không
+    - cho mình hỏi được ko
+    - cho mình đặt câu hỏi với
+    - cho tớ hỏi chút được k
+    - cho tớ hỏi chút được không
+    - cho tớ hỏi chút được không bạn
+    - cho tớ hỏi chút được không chị
+    - cho tớ hỏi chút được không cậu
+    - cho tớ hỏi chút được ko
+    - cho tớ hỏi chút được ko bạn
+    - cho tớ hỏi được k
+    - cho tớ hỏi được không
+    - cho tớ hỏi được ko
+    - cho tớ đặt câu hỏi với
+    - chị cho e hỏi chút được không
+    - chị cho em hỏi chút được k
+    - cậu cho e hỏi chút được ko
+    - cậu cho tớ hỏi chút được không
+    - cậu cho tớ hỏi chút được ko
+    - e muốn hỏi một câu
+    - e muốn hỏi một câu được k
+    - e muốn hỏi một câu được không
+    - e muốn hỏi một câu được ko
+    - e đang muốn hỏi
+    - e đang muốn hỏi cậu
+    - em cho e hỏi chút được ko
+    - em cho em hỏi chút được k
+    - em cho em hỏi chút được không
+    - em cho mình hỏi chút được k
+    - em cho mình hỏi chút được không
+    - em muốn hỏi một câu
+    - em muốn hỏi một câu được k
+    - em muốn hỏi một câu được không
+    - em muốn hỏi một câu được ko
+    - em đang muốn hỏi
+    - hỏi anh một câu được k
+    - hỏi anh một câu được ko
+    - hỏi bạn một câu được không
+    - hỏi bạn một câu được ko
+    - hỏi cậu một câu được k
+    - hỏi cậu một câu được không
+    - hỏi cậu một câu được ko
+    - hỏi em một câu được k
+    - hỏi em một câu được không
+    - hỏi em một câu được ko
+    - hỏi lily một câu được ko
+    - hỏi một câu được k
+    - hỏi một câu được không
+    - hỏi một câu được ko
+    - lily cho em hỏi chút được ko
+    - mình muốn hỏi một câu
+    - mình muốn hỏi một câu được k
+    - mình muốn hỏi một câu được không
+    - mình muốn hỏi một câu được ko
+    - mình đang muốn hỏi
+    - mình đang muốn hỏi cậu
+    - mình đang muốn hỏi shop
+    - shop cho e hỏi chút được k
+    - shop cho mình hỏi chút được không
+    - tớ muốn hỏi một câu
+    - tớ muốn hỏi một câu được k
+    - tớ muốn hỏi một câu được không
+    - tớ muốn hỏi một câu được ko
+    - tớ đang muốn hỏi
+    - tớ đang muốn hỏi bạn
+    - tớ đang muốn hỏi cậu
+    - tớ đang muốn hỏi em
+    - tớ đang muốn hỏi lily
+    - tớ đang muốn hỏi shop
+- intent: ask_is_bot
+  examples: |
+    - anh dùng tự động rep ạ
+    - anh dùng tự động reply à
+    - anh ơi trả lời tự động à
+    - anh ơi tự động rep ạ
+    - anh ơi tự động reply à
+    - anh ơi tự động trả lời à
+    - auto rep hay chị chủ trả lời đó
+    - auto rep hay chủ shop trả lời đó
+    - auto rep phải k
+    - auto rep phải không ạ
+    - auto rep phải ko
+    - auto rep trả lời hả
+    - auto rep ạ
+    - auto trả lời hay ad trả lời đó
+    - auto trả lời hay chị chủ trả lời đó
+    - auto trả lời hay chủ shop trả lời đó
+    - auto trả lời phải k
+    - auto trả lời trả lời à
+    - bot hay admin trả lời đó
+    - bot hay người trả lời đó
+    - bot phải k à
+    - bot trả lời hả
+    - bot tự
+    - bot tự hả
+    - bot tự à
+    - bạn dùng chatbot à
+    - bạn dùng trả lời tự động ạ
+    - bạn dùng tự động reply hả
+    - bạn ơi trả lời tự động ạ
+    - bạn ơi tự động trả lời à
+    - chatbot hả
+    - chatbot phải k hả
+    - chatbot trả lời
+    - chatbot trả lời à
+    - chatbot tự
+    - chatbot tự hả
+    - chatbot tự à
+    - chatbot à
+    - chị dùng auto trả lời ạ
+    - chị dùng bot hả
+    - chị dùng tự động trả lời hả
+    - chị ơi bot à
+    - chị ơi trả lời tự động à
+    - cậu dùng auto trả lời à
+    - cậu dùng bot ạ
+    - cậu dùng tự động rep ạ
+    - cậu ơi auto rep ạ
+    - cậu ơi tự động reply ạ
+    - cậu ơi tự động trả lời hả
+    - là auto rep hay admin đó hả
+    - là auto rep hay chị chủ đó hả
+    - là auto rep hay chị chủ đó ạ
+    - là auto rep hay human đó hả
+    - là auto rep hả
+    - là auto rep à
+    - là auto trả lời hay human đó hả
+    - là auto trả lời hay human đó ạ
+    - là auto trả lời hay người đó ạ
+    - là auto trả lời hay nhân viên đó hả
+    - là bot hay human đó à
+    - là bot à
+    - là bot ạ
+    - là chatbot hay chị chủ đó hả
+    - là chatbot à
+    - là trả lời tự động ạ
+    - là tự động rep hay ad đó hả
+    - là tự động rep à
+    - là tự động reply ạ
+    - là tự động trả lời à
+    - shop dùng auto trả lời à
+    - shop dùng bot hả
+    - shop sử dung auto rep hay admin đó
+    - shop sử dung auto rep hay người đó
+    - shop sử dung chatbot hay ad đó
+    - shop sử dung chatbot hay chủ shop đó
+    - shop sử dung tự động rep hay ad đó
+    - shop sử dung tự động rep hay chị chủ đó
+    - shop sử dung tự động trả lời hay chủ shop đó
+    - shop ơi auto trả lời hả
+    - shop ơi tự động reply ạ
+    - trả lời tự động hay chủ shop trả lời đó
+    - trả lời tự động hả
+    - trả lời tự động trả lời à
+    - trả lời tự động à
+    - trả lời tự động ạ
+    - tự động rep hay chị chủ trả lời đó
+    - tự động rep hay chủ shop trả lời đó
+    - tự động rep hay human trả lời đó
+    - tự động rep hả
+    - tự động rep trả lời hả
+    - tự động rep ạ
+    - tự động reply phải k
+    - tự động reply phải k ạ
+    - tự động reply trả lời
+    - tự động reply à
+    - tự động reply ạ
+    - tự động trả lời hay ad trả lời đó
+    - tự động trả lời hay chủ shop trả lời đó
+    - tự động trả lời phải không
+    - tự động trả lời trả lời
+- intent: ask_intro_overview
+  examples: |
+    - giới thiệu bản thân đi lily
+    - lily có thể giới thiệu về mình ko
+    - giới thiệu cho e chút thông tin về em được k
+    - giới thiệu về em đi
+    - hãy giới thiệu về bản thân đi em
+    - giới thiệu cho e chút thông tin về bạn được không
+    - tự giới thiệu bản thân đi em
+    - giới thiệu đôi chút về bản thân đi bạn
+    - tự giới thiệu bản thân đi lily
+    - giới thiệu về cậu đi
+    - giới thiệu cho em chút thông tin về bạn được không
+    - giới thiệu cho em chút thông tin về cậu được không
+    - giới thiệu cho em chút thông tin về lily được không
+    - giới thiệu cho mình chút thông tin về lily được không
+    - em có thể giới thiệu về mình không
+    - giới thiệu cho tớ chút thông tin về lily được k
+    - giới thiệu cho mình chút thông tin về em được ko
+    - hãy giới thiệu về bản thân đi cậu
+    - bạn có thể cho biết chút thông tin về cậu được k
+    - em có thể cho biết chút thông tin về cậu được k
+    - giới thiệu gì đó về bản thân đi lily
+    - lily có thể giới thiệu chút thông tin gì đó đi
+    - giới thiệu cho tớ chút thông tin về bạn được k
+    - cậu giới thiệu đôi chút về bản thân đi nào
+    - hãy giới thiệu về bản thân đi bạn
+    - giới thiệu cho e chút thông tin về lily được k
+    - giới thiệu cho tớ chút thông tin về em được ko
+    - giới thiệu đôi chút về bản thân đi em
+    - bạn có thể giới thiệu về mình không
+    - giới thiệu cho mình chút thông tin về lily được ko
+    - em có thể cho biết chút thông tin về cậu được không
+    - giới thiệu cho tớ chút thông tin về lily được ko
+    - cậu có thể giới thiệu về mình ko
+    - giới thiệu cho tớ chút thông tin về bạn được ko
+    - hãy giới thiệu bản thân đi
+    - lily có thể giới thiệu về mình k
+    - bạn có thể giới thiệu về mình ko
+    - giới thiệu cho mình chút thông tin về em được k
+    - giới thiệu về lily đi
+    - bạn có thể giới thiệu chút thông tin gì đó đi
+    - hãy giới thiệu bản thân đi em
+    - giới thiệu gì đó về bản thân đi
+    - giới thiệu cho e chút thông tin về bạn được k
+    - em giới thiệu đi nào
+    - hãy giới thiệu về bản thân đi
+    - em tự giới thiệu bản thân đi
+    - giới thiệu cho e chút thông tin về cậu được k
+    - cậu có thể cho biết chút thông tin về cậu được k
+    - cậu có thể cho biết chút thông tin về cậu được ko
+    - lily có thể cho biết chút thông tin về cậu được k
+    - bạn giới thiệu đi nào
+    - giới thiệu cho tớ chút thông tin về cậu được k
+    - giới thiệu cho em chút thông tin về cậu được ko
+    - giới thiệu cho tớ chút thông tin về lily được không
+    - hãy giới thiệu về bản thân đi lily
+    - giới thiệu về bạn trước đi
+    - cậu tự giới thiệu bản thân đi
+    - giới thiệu cho tớ chút thông tin về bạn được không
+    - lily có thể cho biết chút thông tin về cậu được không
+    - giới thiệu đôi chút về bản thân đi
+    - giới thiệu về bạn đi
+    - giới thiệu bản thân đi bạn
+    - giới thiệu cho em chút thông tin về lily được k
+    - em có thể giới thiệu chút thông tin gì đó đi
+    - hãy giới thiệu bản thân đi lily
+    - cậu có thể cho biết chút thông tin về cậu được không
+    - giới thiệu cho e chút thông tin về cậu được không
+    - giới thiệu cho e chút thông tin về cậu được ko
+    - cậu giới thiệu đi nào
+    - giới thiệu bản thân đi
+    - giới thiệu bản thân đi cậu
+    - bạn có thể cho biết chút thông tin về cậu được ko
+    - giới thiệu về bản thân đi
+    - em giới thiệu đôi chút về bản thân đi nào
+    - giới thiệu về em trước đi
+    - giới thiệu bản thân đi em
+    - giới thiệu cho mình chút thông tin về cậu được ko
+    - giới thiệu cho mình chút thông tin về cậu được không
+    - em có thể cho biết chút thông tin về cậu được ko
+    - em giới thiệu đôi chút về mình đi nào
+    - giới thiệu cho em chút thông tin về em được k
+    - cậu có thể giới thiệu về mình không
+    - hãy giới thiệu bản thân đi bạn
+    - bạn giới thiệu đôi chút về mình đi nào
+    - giới thiệu cho mình chút thông tin về cậu được k
+    - giới thiệu cho tớ chút thông tin về cậu được ko
+    - tự giới thiệu đi cậu
+    - giới thiệu về bản thân đi cậu
+    - em có thể giới thiệu về mình ko
+    - giới thiệu gì đó về bản thân đi em
+    - giới thiệu về bản thân đi em
+    - bạn có thể giới thiệu về mình k
+    - tự giới thiệu đi em
+    - lily có thể giới thiệu về mình không
+    - tự giới thiệu bản thân đi
+    - giới thiệu về bản thân đi lily
+    - bạn có thể cho biết chút thông tin về cậu được không
+    - tự giới thiệu bản thân đi bạn
+    - tự giới thiệu đi bạn
+    - hãy giới thiệu bản thân đi cậu
+- intent: self_ask_name
+  examples: |
+    - biết tên bot được không
+    - biết tên bạn được không
+    - biết tên cậu được không
+    - bot có tên k
+    - bot có tên không
+    - bot có tên ko
+    - bot tên gì
+    - bot tên là gì
+    - bạn có tên k
+    - bạn có tên không
+    - bạn có tên ko
+    - bạn họ và tên là gì
+    - bạn tên gì
+    - bạn tên thật là gì
+    - bạn tên đầy đủ là gì
+    - bạn tên đệm là gì
+    - cho e biết tên bot được không
+    - cho e biết tên bạn được không
+    - cho e biết tên cậu được không
+    - cho em biết tên bot được không
+    - cho em biết tên bạn được không
+    - cho em biết tên cậu được không
+    - cho mình biết tên bot được không
+    - cho mình biết tên bạn được không
+    - cho mình biết tên cậu được không
+    - cho tớ biết tên bot được không
+    - cho tớ biết tên bạn được không
+    - cho tớ biết tên cậu được không
+    - cậu có tên k
+    - cậu có tên không
+    - cậu họ và tên là gì
+    - cậu tên gì
+    - cậu tên thật là gì
+    - cậu tên đệm là gì
+    - tên gì
+    - tên là gì
+    - bạn tên là gì
+    - cậu có tên ko
+    - cậu tên là gì
+    - cậu tên đầy đủ là gì
+    - e biết tên bot được không
+    - e biết tên bạn được không
+    - e biết tên cậu được không
+    - em biết tên bot được không
+    - em biết tên bạn được không
+    - em biết tên cậu được không
+    - em họ và tên là gì
+    - em tên gì
+    - em tên là gì
+    - em tên thật là gì
+    - em tên đầy đủ là gì
+    - em tên đệm là gì
+    - họ và tên là gì
+    - lily họ và tên là gì
+    - lily tên gì
+    - lily tên là gì
+    - lily tên thật là gì
+    - lily tên đầy đủ là gì
+    - lily tên đệm là gì
+    - mình biết tên bot được không
+    - mình biết tên bạn được không
+    - mình biết tên cậu được không
+    - tên bot là gì
+    - tên bạn là gì
+    - tên cậu là gì
+    - tên là gì đó
+    - tên thật là gì
+    - tên đầy đủ là gì
+    - tên đệm là gì
+    - tớ biết tên bot được không
+    - tớ biết tên bạn được không
+    - tớ biết tên cậu được không
+- intent: self_ask_age
+  examples: |
+    - bao nhieu tuổi
+    - bao nhieu tuổi r
+    - bao nhiêu tuổi
+    - bao nhiêu tuổi r
+    - bao nhiêu tuổi đấy
+    - bn tuổi
+    - bn tuổi r
+    - bn tuổi rồi
+    - bn tuổi đó
+    - bn tuổi đấy
+    - bnhieu tuổi
+    - bnhieu tuổi r
+    - bnhieu tuổi rồi
+    - bạn bn tuổi r
+    - bạn bnhieu tuổi đấy
+    - bạn có tuổi không
+    - bạn có tuổi ko
+    - cho e biết tuổi lily được k
+    - cho em biết tuổi em được ko
+    - cho em biết tuổi được không
+    - cho mình biết tuổi được ko
+    - cho tớ biết tuổi được k
+    - cho tớ biết tuổi được không
+    - cậu bao nhieu tuổi
+    - cậu bao nhiêu tuổi r
+    - cậu bn tuổi rồi
+    - cậu bnhieu tuổi
+    - cậu có tuổi k
+    - cậu có tuổi không
+    - cậu có tuổi ko
+    - em bao nhieu tuổi
+    - em biết tuổi bạn được không
+    - em biết tuổi bạn được ko
+    - em biết tuổi em được không
+    - em biết tuổi được k
+    - em biết tuổi được không
+    - em biết tuổi được ko
+    - em bnhieu tuổi r
+    - em có tuổi k
+    - em có tuổi không
+    - em có tuổi ko
+    - lily bao nhieu tuổi
+    - lily bn tuổi
+    - lily bnhieu tuổi rồi
+    - lily có tuổi không
+    - lily có tuổi ko
+    - mình biết tuổi bạn được không
+    - năm nay bao nhieu tuổi
+    - năm nay bao nhieu tuổi r
+    - năm nay bao nhieu tuổi rồi
+    - năm nay bao nhiêu tuổi
+    - năm nay bao nhiêu tuổi rồi
+    - năm nay bn tuổi
+    - năm nay bnhieu tuổi rồi
+    - năm nay bạn bn tuổi r
+    - năm nay bạn bnhieu tuổi
+    - năm nay cậu bnhieu tuổi rồi
+    - năm nay em bao nhieu tuổi
+    - năm nay em bao nhieu tuổi rồi
+    - năm nay em bao nhiêu tuổi r
+    - năm nay được bao nhieu tuổi
+    - năm nay được bao nhieu tuổi r
+    - năm nay được bao nhiêu tuổi
+    - năm nay được bao nhiêu tuổi rồi
+    - năm nay được bnhieu tuổi
+    - năm nay được bnhieu tuổi rồi
+    - năm nay được bạn bao nhiêu tuổi
+    - năm nay được lily bao nhieu tuổi
+    - tuổi của cậu bao nhieu
+    - tuổi của cậu bao nhieu đấy
+    - tuổi của cậu bn hả
+    - tuổi của lily bao nhiêu hả
+    - tuổi của lily bao nhiêu đấy
+    - tuổi của lily bn hả
+    - tính đến nam nay thì bạn bao nhieu tuổi r hả
+    - tính đến nam nay thì bạn bao nhiêu tuổi r
+    - tính đến nam nay thì bạn bnhieu tuổi
+    - tính đến nam nay thì bạn bnhieu tuổi rồi đấy
+    - tính đến nam nay thì cậu bao nhieu tuổi
+    - tính đến nam nay thì cậu bao nhieu tuổi r đấy
+    - tính đến nam nay thì cậu bn tuổi
+    - tính đến nam nay thì em bao nhiêu tuổi đó
+    - tính đến nam nay thì em bn tuổi r
+    - tính đến nam nay thì em bn tuổi đó
+    - tính đến nam nay thì em bnhieu tuổi r
+    - tính đến nam nay thì lily bao nhiêu tuổi đó
+    - tính đến nam nay thì lily bn tuổi hả
+    - tính đến nam nay thì lily bn tuổi rồi
+    - tính đến nam nay thì lily bnhieu tuổi rồi hả
+    - tớ biết tuổi em được không
+    - tớ biết tuổi lily được ko
+    - tớ biết tuổi được ko
+    - đến năm nay thì bạn được bn tuổi
+    - đến năm nay thì cậu được bao nhiêu tuổi
+    - đến năm nay thì lily được bao nhiêu tuổi
+    - đến năm nay thì lily được bnhieu tuổi
+    - đến năm nay thì được bao nhieu tuổi
+    - đến năm nay thì được bao nhieu tuổi r
+    - đến năm nay thì được bn tuổi
+    - đến năm nay thì được bnhieu tuổi
+- intent: self_ask_feature
+  examples: |
+    - nhưng việc gì mà em có thể làm hả
+    - nhưng việc gì mà em có thể làm được hả
+    - bạn làm được những gì
+    - nhưng việc gì mà bạn có thể làm được hả
+    - lily làm gì
+    - bạn tinh năng gì
+    - lily có thể giúp được những việc gì
+    - nhưng việc gì mà lily có thể làm được hả
+    - tinh năng của lily gì
+    - cậu có những chức năng gì
+    - cậu có thể làm được gì
+    - em có thể làm được gì nào
+    - em làm được những việc gì
+    - cậu giúp được những việc gì
+    - nhưng việc gì mà bạn có thể làm hả
+    - nhưng việc gì mà cậu có thể giúp được hả
+    - bạn làm gì
+    - cậu có thể làm được gì nào
+    - bạn làm được gì
+    - bạn có thể làm được những gì
+    - lily có thể làm được những gì
+    - em có thể làm được những việc gì
+    - em có thể làm gì
+    - lily chức năng gì
+    - chức năng của bạn gì
+    - bạn có những chức năng gì
+    - lily có những chức năng gì
+    - cậu có thể làm được những gì
+    - em chức năng gì
+    - lily làm được gì nào
+    - em làm được những gì
+    - cậu chức năng gì
+    - bạn có thể làm được gì
+    - bạn giúp được những việc gì
+    - chức năng của em gì
+    - cậu tinh năng gì
+    - tinh năng của em gì
+    - bạn làm được gì nào
+    - lily có thể làm được gì nào
+    - bạn có những tinh năng gì
+    - em có thể giúp được những việc gì
+    - cậu có thể làm gì
+    - lily có thể làm được những việc gì
+    - nhưng việc gì mà cậu có thể làm hả
+    - em làm được gì nào
+    - em có thể làm được những gì
+    - lily tinh năng gì
+    - em làm được gì
+    - chức năng của lily gì
+    - cậu làm được những việc gì
+    - bạn chức năng gì
+    - lily làm được những việc gì
+    - em tinh năng gì
+    - em có thể làm được gì
+    - cậu làm được những gì
+    - lily làm được gì
+    - cậu làm được gì nào
+    - tinh năng của cậu gì
+    - nhưng việc gì mà em có thể giúp được hả
+    - em có những tinh năng gì
+    - em làm gì
+    - em giúp được những việc gì
+    - cậu có thể giúp được những việc gì
+    - lily làm được những gì
+    - lily có thể làm gì
+    - bạn có thể làm gì
+    - bạn làm được những việc gì
+    - nhưng việc gì mà cậu có thể làm được hả
+    - lily có những tinh năng gì
+    - em có những chức năng gì
+    - lily có thể làm được gì
+    - cậu có thể làm được những việc gì
+    - bạn có thể làm được gì nào
+    - cậu làm được gì
+    - cậu làm gì
+    - tinh năng của bạn gì
+    - lily giúp được những việc gì
+    - nhưng việc gì mà lily có thể làm hả
+    - cậu có những tinh năng gì
+    - nhưng việc gì mà bạn có thể giúp được hả
+    - bạn có thể làm được những việc gì
+    - chức năng của cậu gì
+    - nhưng việc gì mà lily có thể giúp được hả
+    - bạn có thể giúp được những việc gì
+- intent: self_ask_gender
+  examples: |
+    - giới tính của lily
+    - giới tính của cậu là nữ phải k
+    - giới tính của em là nữ phải ko
+    - giới tính của cậu có phải là nữ không
+    - là boy hay girl đó lily
+    - lily có phải là nữ không
+    - giới tính của em là nam phải ko
+    - giới tính của cậu là nam hay nữ
+    - bạn là nam phải k
+    - bạn có phải là nữ k
+    - giới tính của bạn là gì thế
+    - cho mình biết giới tính của bạn
+    - giới tính của bạn là nữ phải ko
+    - giới tính của bạn là gì đấy
+    - giới tính của em là nam phải không
+    - lily có phải là nữ ko
+    - là nam hay nữ
+    - bạn là nam à
+    - giới tính của em là nữ phải không
+    - cậu có phải là nữ không
+    - giới tính của bạn là nam phải ko
+    - giới tính của cậu là nam à
+    - cho mình hỏi giới tính của cậu
+    - cho mình hỏi giới tính của bạn
+    - giới tính của bạn là gì đó
+    - lily có phải là nam k
+    - lily có giới tính là gì
+    - giới tính của lily là nữ phải k
+    - lily là nam à
+    - giới tính của em có phải là nữ không
+    - em là nữ hay nam
+    - em là nam phải ko
+    - cậu có phải là nam không
+    - bạn là nữ phải không
+    - giới tính của cậu là nam phải ko
+    - em là nữ phải ko
+    - giới tính của bạn là gì
+    - là boy hay girl đó em
+    - cậu là nữ hay nam
+    - giới tính của bạn là boy hay girl
+    - giới tính của em có phải là nam không
+    - giới tính của em có phải là nam k
+    - giới tính của cậu có phải là nữ ko
+    - giới tính của em là nữ à
+    - giới tính của em là nam à
+    - giới tính của bạn có phải là nữ k
+    - giới tính của lily là nữ à
+    - là boy hay girl đó bạn
+    - giới tính của cậu là gì
+    - giới tính của lily là gì đấy
+    - bạn là nữ phải ko
+    - lily có phải là nữ k
+    - cậu là nam à
+    - giới tính của lily là nam phải k
+    - giới tính của cậu là nữ phải ko
+    - cậu là nam hay nữ
+    - cậu là nữ phải ko
+    - cậu có phải là nữ ko
+    - là nam hay nữ đó cậu
+    - giới tính của em là nữ hay nam
+    - cậu có phải là nam ko
+    - cậu là nữ phải k
+    - giới tính của bạn là nữ phải k
+    - giới tính của cậu có phải là nam không
+    - em có phải là nam không
+    - giới tính của em là nam hay nữ
+    - cho hỏi giới tính của cậu là gì
+    - giới tính của em có phải là nữ k
+    - cho biết giới tính của cậu là gì
+    - cho biết giới tính của bạn là gì
+    - lily là nữ phải ko
+    - là nữ hay nam
+    - giới tính của bạn là nam à
+    - bạn là nam phải không
+    - bạn có phải là nam k
+    - giới tính của cậu là nữ à
+    - lily có phải là nam không
+    - bạn có phải là nữ không
+    - giới tính của lily là nam hay nữ
+    - em là boy hay girl
+    - lily là boy hay girl
+    - là nam hay nữ đó lily
+    - lily là nữ phải không
+    - em là nữ phải k
+    - giới tính của cậu là nữ phải không
+    - giới tính của bạn có phải là nam k
+    - em có phải là nam k
+    - em là nam phải không
+    - giới tính của em là gì đấy
+    - giới tính của lily là gì
+    - cho mình biết giới tính của em
+    - bạn là boy hay girl
+    - giới tính của lily là nữ phải không
+    - giới tính của bạn có phải là nam không
+    - giới tính của em
+    - em có phải là nam ko
+    - giới tính của em có phải là nam ko
+    - giới tính của bạn là nam hay nữ
+    - giới tính của lily là boy hay girl
+    - cho hỏi giới tính của em là gì
+- intent: request_product
+  examples: |
+    - anh cho e hỏi bên mình có bán [bag](object_type) màu [hồng](color) k ạ
+    - anh cho em hỏi bên mình có bán [quần](object_type) k ạ
+    - anh có bán [quần jean](object_type) ko
+    - anh có bán [áo coat](object_type) màu [blue](color) không
+    - anh có bán [nam](gender) ko em
+    - bên mình có bán [giày](object_type) k
+    - bên mình có bán [giày](object_type) màu [hồng](color) k
+    - bên mình có bán [khăn quàng](object_type) màu [vàng](color) ko
+    - bên mình có bán [quần jean](object_type) ko
+    - bên mình có bán [shoe](object_type) k
+    - bên mình có bán [shoe](object_type) màu [tím than](color) không
+    - bên mình có bán [thắt lưng](object_type) không
+    - bên mình có bán [vòng cổ](object_type) k
+    - bên mình có bán [vòng tay](object_type) k
+    - bên mình có bán [vòng tay](object_type) không
+    - bên mình có bán [unisex](gender) không
+    - bên mình có bán [áo coat](object_type) ko
+    - bên mình có bán [áo jacket](object_type) k
+    - bên mình có bán [unisex](gender) ko
+    - bên mình có bán [đầm](object_type) k
+    - bạn cho e hỏi bên mình có bán [unisex](gender) không ạ
+    - bạn cho em hỏi bên mình có bán [thắt lưng](object_type) không ạ
+    - bạn cho mình hỏi bên mình có bán [bông tai](object_type) không ạ
+    - bạn cho tớ hỏi bên mình có bán [unisex](gender) không ạ
+    - bạn có bán [áo jackets](object_type) ko
+    - cho e hỏi bên mình có bán [dày](object_type) không ạ
+    - cho e hỏi bên mình có bán [unisex](gender) k ạ
+    - cho e hỏi bên mình có bán [váy skirt](object_type) ko ạ
+    - cho em hỏi bên mình có bán [thắt lưng](object_type) k ạ
+    - cho mình hỏi bên mình có bán [bông tai](object_type) màu [tím](color) k ạ
+    - cho mình hỏi bên mình có bán [dress](object_type) không ạ
+    - cho mình hỏi bên mình có bán [phụ kiện](object_type) màu [hồng nhạt](color) k ạ
+    - cho tớ hỏi bên mình có bán [dress](object_type) k ạ
+    - cho tớ hỏi bên mình có bán [áo coat](object_type) k ạ
+    - cho tớ hỏi bên mình có bán [áo jacket](object_type) ko ạ
+    - chị cho e hỏi bên mình có bán [unisex](gender) k ạ
+    - chị có bán [dày](object_type) k em
+    - chị có bán [nữ](gender) ko cậu
+    - có [bag](object_type) không
+    - có bán [bag](object_type) k anh
+    - có bán [nữ](gender) ko
+    - có bán [bags](object_type) ko
+    - có bán [dày](object_type) ko
+    - có bán [giày](object_type) màu [đỏ đậm](color) không chị
+    - có bán [phụ kiện](object_type) ko bạn
+    - có bán [phụ kiện](object_type) màu [trắng](color) ko chị
+    - có bán [quần jean](object_type) ko
+    - có bán [quần jean](object_type) màu [xanh nước biển](color) ko
+    - có bán [quần](object_type) ko
+    - có bán [quần](object_type) màu [hồng nhạt](color) k
+    - có bán [unisex](gender) k anh
+    - có bán [thắt lưng](object_type) ko shop
+    - có bán [thắt lưng](object_type) màu [hồng cánh sen](color) ko
+    - có bán [thắt lưng](object_type) màu [xanh](color) ko chị
+    - có bán [túi xách](object_type) k
+    - có bán [túi xách](object_type) không shop
+    - có bán [túi xách](object_type) màu [xanh da trời](color) không
+    - có bán [nam](gender) không
+    - có bán [váy skirt](object_type) ko chị
+    - có bán [vòng cổ](object_type) ko shop
+    - có bán [vòng cổ](object_type) màu [yellow](color) k chị
+    - có bán [vòng tay](object_type) k
+    - có bán [vòng tay](object_type) ko
+    - có bán [vòng tay](object_type) màu [vàng](color) ko
+    - có bán [nữ](gender) không
+    - có bán [áo coat](object_type) không anh
+    - có bán [áo jacket](object_type) không chị
+    - có bán [nữ](gender) k
+    - có bán [áo jackets](object_type) k
+    - có bán [áo khoác](object_type) ko bạn
+    - có bán [áo yếm](object_type) k
+    - có bán [áo yếm](object_type) k shop
+    - có bán [đầm](object_type) không
+    - có bán [nam](gender) không bạn
+    - có bán [nữ](gender) không shop
+    - có [dress](object_type) màu [yellow](color) ko
+    - có [unisex](gender) k
+    - có [giày](object_type) màu [blue](color) k
+    - có [khăn quàng](object_type) màu [cam](color) không
+    - có [nam](gender) k
+    - có [quần jean](object_type) màu [tím](color) k
+    - có [shoe](object_type) màu [đỏ](color) ko
+    - có [vấy](object_type) k
+    - có [unisex](gender) ko
+    - cậu cho em hỏi bên mình có bán [unisex](gender) k ạ
+    - cậu có bán [nam](gender) k lily
+    - cậu có bán [nam](gender) k bạn
+    - cậu có bán [áo jacket](object_type) màu [hồng](color) k
+    - shop cho e hỏi bên mình có bán [túi xách](object_type) màu [xanh lá cây](color) không ạ
+    - shop cho em hỏi bên mình có bán [túi xách](object_type) ko ạ
+    - shop có bán [dày](object_type) k lily
+    - shop có bán [dày](object_type) màu [xanh nước biển](color) k lily
+    - shop có bán [nữ](gender) không bạn
+    - shop có bán [quần](object_type) không lily
+    - shop có bán [nam](gender) không
+    - shop có bán [vấy](object_type) màu [hồng cánh sen](color) không lily
+    - shop có bán [vấy](object_type) màu [đỏ đậm](color) không bạn
+- intent: request_info
+  examples: |
+    - anh cho em xin ít thông tin [dress](object_type) này được không
+    - anh gửi em thông tin sản phẩm
+    - anh gửi mình thông tin [bags](object_type) này với
+    - anh gửi mình thông tin [áo coat](object_type) này với
+    - bạn cho e xin ít thông tin sản phẩm này được không
+    - bạn cho e xin ít thông tin sản phẩm này được ko
+    - bạn cho mình xin ít thông tin [dress](object_type) này được k
+    - bạn cho mình xin ít thông tin [áo yếm](object_type) này được không
+    - bạn cho tớ xin ít thông tin sản phẩm này được k
+    - bạn gửi e thông tin sản phẩm
+    - bạn gửi e thông tin [thắt lưng](object_type) này với
+    - bạn gửi em thông tin [quần jean](object_type) này với
+    - bạn gửi mình thông tin sản phẩm
+    - bạn gửi mình thông tin [thắt lưng](object_type) này với
+    - cho e xin ít thông tin [phụ kiện](object_type) này được ko
+    - cho e xin ít thông tin [shoe](object_type) này được ko
+    - cho e xin ít thông tin sp này được k
+    - cho em xin ít thông tin sp này được không
+    - cho em xin ít thông tin sản phẩm này được không
+    - cho em xin ít thông tin [đầm](object_type) này được k
+    - cho mình xin ít thông tin [bông tai](object_type) này được không
+    - cho mình xin ít thông tin [dày](object_type) này được không
+    - cho tớ xin ít thông tin [bông tai](object_type) này được k
+    - cho tớ xin ít thông tin [dress](object_type) này được k
+    - cho tớ xin ít thông tin [khăn quàng](object_type) này được k
+    - cho tớ xin ít thông tin sản phẩm này được ko
+    - cho tớ xin ít thông tin [áo jacket](object_type) này được ko
+    - cho xin thông tin [bags](object_type) này đi
+    - cho xin thông tin [dày](object_type) này đi
+    - cho xin thông tin [khăn quàng](object_type) này đi
+    - cho xin thông tin [phụ kiện](object_type) này đi
+    - cho xin thông tin [quần](object_type) này đi
+    - cho xin thông tin [shoe](object_type) này đi
+    - cho xin thông tin sp này đi
+    - cho xin thông tin sản phẩm này đi
+    - cho xin thông tin [thắt lưng](object_type) này đi
+    - cho xin thông tin [váy skirt](object_type) này đi
+    - cho xin thông tin [vòng tay](object_type) này đi
+    - cho xin thông tin [vấy](object_type) này đi
+    - cho xin thông tin [áo coat](object_type) này đi
+    - cho xin thông tin [áo jackets](object_type) này đi
+    - cho xin thông tin [áo khoác](object_type) này đi
+    - cho xin thông tin [áo yếm](object_type) này đi
+    - cho xin thông tin [đầm](object_type) này đi
+    - chị cho em xin ít thông tin [áo jacket](object_type) này được k
+    - chị cho mình xin ít thông tin [quần jean](object_type) này được không
+    - chị cho mình xin ít thông tin sp này được k
+    - có thông tin gì về sp này k
+    - có thông tin gì về sp này không bạn
+    - có thông tin gì về sp này ko chị
+    - có thông tin gì về sp này ko lily
+    - có thông tin gì về sản phẩm này k
+    - có thông tin gì về sản phẩm này k chị
+    - có thông tin gì về sản phẩm này không
+    - có thông tin gì về sản phẩm này không chị
+    - có thông tin gì về sản phẩm này không cậu
+    - có thông tin gì về sản phẩm này không em
+    - có thông tin gì về sản phẩm này không lily
+    - có thông tin gì về sản phẩm này ko
+    - có thông tin gì về sản phẩm này ko cậu
+    - cậu cho mình xin ít thông tin [giày](object_type) này được ko
+    - cậu cho mình xin ít thông tin sp này được không
+    - cậu cho tớ xin ít thông tin sản phẩm này được ko
+    - cậu cho tớ xin ít thông tin [vòng tay](object_type) này được ko
+    - cậu gửi e thông tin [dày](object_type) này với
+    - cậu gửi mình thông tin [khăn quàng](object_type) này với
+    - cậu gửi mình thông tin sản phẩm
+    - em cho e xin ít thông tin [bag](object_type) này được không
+    - em cho e xin ít thông tin [áo yếm](object_type) này được không
+    - em cho em xin ít thông tin sp này được k
+    - em cho mình xin ít thông tin sp này được k
+    - em cho tớ xin ít thông tin [áo jacket](object_type) này được ko
+    - em gửi e thông tin sản phẩm
+    - em gửi tớ thông tin sản phẩm
+    - gửi e thông tin [quần](object_type) này với
+    - gửi e thông tin sản phẩm
+    - gửi e thông tin [áo yếm](object_type) này với
+    - gửi em thông tin [giày](object_type) này với
+    - gửi em thông tin [khăn quàng](object_type) này với
+    - gửi em thông tin sản phẩm
+    - gửi em thông tin [áo jacket](object_type) này với
+    - gửi mình thông tin [bags](object_type) này với
+    - gửi mình thông tin sản phẩm
+    - gửi mình thông tin [áo yếm](object_type) này với
+    - gửi tớ thông tin [dày](object_type) này với
+    - gửi tớ thông tin [giày](object_type) này với
+    - gửi tớ thông tin sản phẩm
+    - gửi tớ thông tin [vấy](object_type) này với
+    - gửi tớ thông tin [áo jackets](object_type) này với
+    - gửi tớ thông tin [đầm](object_type) này với
+    - lily cho tớ xin ít thông tin sp này được k
+    - lily gửi mình thông tin sản phẩm
+    - shop cho em xin ít thông tin [quần](object_type) này được ko
+    - shop cho mình xin ít thông tin [dress](object_type) này được k
+    - shop cho mình xin ít thông tin sp này được k
+    - shop cho mình xin ít thông tin sp này được không
+    - shop cho tớ xin ít thông tin sp này được không
+    - shop gửi e thông tin [áo jackets](object_type) này với
+    - shop gửi em thông tin [áo coat](object_type) này với
+    - shop gửi tớ thông tin [áo jackets](object_type) này với
+- intent: request_image
+  examples: |
+    - bạn gửi em ảnh với
+    - cho e xem ảnh [bông tai](object_type) đó đi
+    - cho e xem ảnh với
+    - cho e xem ảnh được không bạn
+    - cho e xem ảnh được không lily
+    - cho e xin ảnh đi bạn
+    - cho e xin ảnh đi cậu
+    - cho e xin ảnh đi em
+    - cho e xin ảnh được không
+    - cho e xin ảnh được ko
+    - cho em xem ảnh [khăn quàng](object_type) đó đi lily
+    - cho em xem ảnh [quần](object_type) đó đi
+    - cho em xem ảnh [shoe](object_type) đó đi cậu
+    - cho em xem ảnh với
+    - cho em xem ảnh được không anh
+    - cho em xem ảnh được không cậu
+    - cho em xin ảnh [dress](object_type) đó đi
+    - cho em xin ảnh [phụ kiện](object_type) đó đi
+    - cho em xin ảnh [quần jean](object_type) đó đi
+    - cho em xin ảnh [túi xách](object_type) đó đi
+    - cho em xin ảnh [áo coat](object_type) đó đi
+    - cho em xin ảnh [áo khoác](object_type) đó đi
+    - cho em xin ảnh đi
+    - cho em xin ảnh được không
+    - cho mình xem ảnh [dày](object_type) đó đi anh
+    - cho mình xem ảnh với
+    - cho mình xem ảnh được không bạn
+    - cho mình xem ảnh được không cậu
+    - cho mình xem ảnh được không lily
+    - cho mình xin ảnh [bags](object_type) đó đi
+    - cho mình xin ảnh [dày](object_type) đó đi
+    - cho mình xin ảnh [quần](object_type) đó đi
+    - cho mình xin ảnh [thắt lưng](object_type) đó đi
+    - cho mình xin ảnh [áo coat](object_type) đó đi
+    - cho mình xin ảnh [áo jacket](object_type) đó đi
+    - cho mình xin ảnh [áo jackets](object_type) đó đi
+    - cho mình xin ảnh [áo khoác](object_type) đó đi
+    - cho mình xin ảnh đi
+    - cho mình xin ảnh đi anh
+    - cho mình xin ảnh đi cậu
+    - cho mình xin ảnh đi em
+    - cho mình xin ảnh được không
+    - cho mình xin ảnh được ko
+    - cho tớ xem ảnh [bag](object_type) đó đi
+    - cho tớ xem ảnh [bags](object_type) đó đi bạn
+    - cho tớ xem ảnh [phụ kiện](object_type) đó đi cậu
+    - cho tớ xem ảnh [shoe](object_type) đó đi
+    - cho tớ xem ảnh với
+    - cho tớ xem ảnh [áo coat](object_type) đó đi
+    - cho tớ xem ảnh được không bạn
+    - cho tớ xin ảnh [phụ kiện](object_type) đó đi
+    - cho tớ xin ảnh [vòng tay](object_type) đó đi
+    - cho tớ xin ảnh [áo jacket](object_type) đó đi
+    - cho tớ xin ảnh đi
+    - cho tớ xin ảnh được k
+    - chị gửi e ảnh với
+    - có ảnh sp k
+    - có ảnh sp k gửi mình với
+    - có ảnh sp k gửi tớ với
+    - có ảnh sp không gửi em với
+    - có ảnh sp không gửi mình với
+    - có ảnh sp không gửi tớ với
+    - có ảnh sp ko
+    - có ảnh sản phẩm k
+    - có ảnh sản phẩm k gửi e với
+    - có ảnh sản phẩm k gửi tớ với
+    - có ảnh sản phẩm không
+    - có ảnh sản phẩm không gửi em với
+    - có ảnh sản phẩm ko
+    - có ảnh sản phẩm ko gửi e với
+    - có ảnh sản phẩm ko gửi em với
+    - có ảnh sản phẩm ko gửi mình với
+    - có ảnh sản phẩm ko gửi tớ với
+    - cậu gửi e ảnh với
+    - cậu gửi mình ảnh với
+    - cậu gửi tớ ảnh với
+    - em gửi e ảnh với
+    - em gửi mình ảnh với
+    - gửi e ảnh đi anh
+    - gửi e ảnh đi bạn
+    - gửi e ảnh đi em
+    - gửi e ảnh đi lily
+    - gửi e ảnh được k
+    - gửi e ảnh được ko
+    - gửi em ảnh đi cậu
+    - gửi em ảnh đi em
+    - gửi em ảnh đi lily
+    - gửi em ảnh đi shop
+    - gửi em ảnh được k
+    - gửi em ảnh được ko
+    - gửi mình ảnh đi anh
+    - gửi mình ảnh đi bạn
+    - gửi mình ảnh được k
+    - gửi tớ ảnh được k
+    - gửi tớ ảnh được không
+    - gửi tớ ảnh được ko
+    - lily gửi em ảnh với
+    - lily gửi mình ảnh với
+    - lily gửi tớ ảnh với
+    - shop gửi tớ ảnh với
+- intent: request_color
+  examples: |
+    - anh còn những mầu nào ạ
+    - anh ơi [bags](object_type) này còn những màu gì ạ
+    - [bag](object_type) này có có những mầu gì ạ
+    - [bag](object_type) này có mấy màu ạ
+    - [bag](object_type) này có mấy mầu ạ
+    - [bags](object_type) này có mấy mầu ạ
+    - [bông tai](object_type) này còn màu gì ạ
+    - [bông tai](object_type) này còn màu nào ạ
+    - [bông tai](object_type) này có có những màu gì ạ
+    - bạn còn những màu nào ạ
+    - bạn còn những mầu gì ạ
+    - bạn còn những mầu nào ạ
+    - bạn ơi [shoe](object_type) này còn những mầu nào ạ
+    - bạn ơi [váy skirt](object_type) này còn những mầu nào ạ
+    - bạn ơi [áo jackets](object_type) này còn những màu nào ạ
+    - chị còn những màu gì ạ
+    - chị còn những mầu gì ạ
+    - chị ơi [phụ kiện](object_type) này còn những màu gì ạ
+    - chị ơi [shoe](object_type) này còn những mầu nào ạ
+    - còn [bag](object_type) màu gì ạ
+    - còn [bag](object_type) mầu gì ạ
+    - còn [bông tai](object_type) màu gì ạ
+    - còn [dày](object_type) màu gì ạ
+    - còn [dày](object_type) màu nào ạ
+    - còn [giày](object_type) màu nào ạ
+    - còn [giày](object_type) mầu gì ạ
+    - còn [khăn quàng](object_type) mầu gì ạ
+    - còn màu gì cậu
+    - còn màu gì shop
+    - còn màu gì ạ
+    - còn màu nào anh
+    - còn màu nào bạn
+    - còn màu nào shop
+    - còn màu nào ạ
+    - còn mầu gì anh
+    - còn mầu gì cậu
+    - còn mầu gì shop
+    - còn mầu gì ạ
+    - còn mầu nào anh
+    - còn mầu nào cậu
+    - còn mầu nào ạ
+    - còn [phụ kiện](object_type) màu gì ạ
+    - còn [quần jean](object_type) mầu gì ạ
+    - còn [quần](object_type) màu nào ạ
+    - còn [quần](object_type) mầu nào ạ
+    - còn [túi xách](object_type) màu gì ạ
+    - còn [vòng cổ](object_type) màu nào ạ
+    - còn [áo jacket](object_type) màu gì ạ
+    - còn [áo khoác](object_type) mầu gì ạ
+    - còn [đầm](object_type) màu gì ạ
+    - có những màu gì ạ
+    - có những màu nào ạ
+    - có những mầu gì ạ
+    - có những mầu nào ạ
+    - cậu còn những màu nào ạ
+    - cậu còn những mầu gì ạ
+    - cậu còn những mầu nào ạ
+    - cậu ơi [vấy](object_type) này còn những màu nào ạ
+    - cậu ơi [áo coat](object_type) này còn những mầu gì ạ
+    - [dress](object_type) này còn mầu nào ạ
+    - [dress](object_type) này có có những mầu nào ạ
+    - [dày](object_type) này còn mầu gì ạ
+    - [giày](object_type) này có mấy màu ạ
+    - [phụ kiện](object_type) này có mấy màu ạ
+    - [quần jean](object_type) này có có những màu gì ạ
+    - [quần jean](object_type) này có mấy mầu ạ
+    - [shoe](object_type) này có có những mầu gì ạ
+    - [shoe](object_type) này có mấy màu ạ
+    - shop còn những màu gì ạ
+    - shop còn những màu nào ạ
+    - shop còn những mầu nào ạ
+    - size này còn màu gì anh
+    - size này còn màu gì cậu
+    - size này còn màu gì shop
+    - size này còn màu nào bạn
+    - size này còn màu nào cậu
+    - size này còn mầu gì anh
+    - size này còn mầu gì chị
+    - size này còn mầu gì cậu
+    - size này còn mầu nào anh
+    - size này còn mầu nào chị
+    - size này còn mầu nào cậu
+    - [thắt lưng](object_type) này có có những màu nào ạ
+    - [thắt lưng](object_type) này có mấy mầu ạ
+    - [váy skirt](object_type) này còn mầu nào ạ
+    - [váy skirt](object_type) này có có những màu gì ạ
+    - [váy skirt](object_type) này có mấy mầu ạ
+    - [vòng tay](object_type) này có có những mầu gì ạ
+    - [vòng tay](object_type) này có có những mầu nào ạ
+    - [vấy](object_type) này có có những mầu gì ạ
+    - vậy còn những màu gì ạ
+    - vậy còn những màu nào ạ
+    - vậy còn những mầu gì ạ
+    - [áo coat](object_type) này còn màu nào ạ
+    - [áo coat](object_type) này còn mầu gì ạ
+    - [áo coat](object_type) này có mấy màu ạ
+    - [áo jacket](object_type) này còn màu gì ạ
+    - [áo jackets](object_type) này có mấy mầu ạ
+    - [áo yếm](object_type) này còn mầu nào ạ
+    - [đầm](object_type) này có mấy màu ạ
+- intent: request_price
+  examples: |
+    - [bag](object_type) này giá bn ạ
+    - [bags](object_type) này giá bao nhieu ạ
+    - bao nhieu tiền vậy anh
+    - bao nhieu tiền vậy chị
+    - bao nhieu tiền ạ
+    - bao nhiêu tiền ạ
+    - bn tiền vậy anh
+    - bn tiền vậy bạn
+    - bn tiền vậy cậu
+    - bn tiền vậy shop
+    - bn tiền ạ
+    - bnhieu tiền vậy bạn
+    - bnhieu tiền vậy cậu
+    - bnhieu tiền vậy shop
+    - bnhieu tiền ạ
+    - báo giá e [dày](object_type) này với
+    - báo giá e [khăn quàng](object_type) này với
+    - báo giá em [khăn quàng](object_type) này với
+    - báo giá em [shoe](object_type) này với
+    - báo giá em [váy skirt](object_type) này với
+    - báo giá giúp e [bag](object_type) này
+    - báo giá giúp e [áo yếm](object_type) này
+    - báo giá giúp em [bông tai](object_type) này
+    - báo giá giúp em [phụ kiện](object_type) này
+    - báo giá giúp em [quần](object_type) này
+    - báo giá giúp mình [khăn quàng](object_type) này
+    - báo giá giúp mình [phụ kiện](object_type) này
+    - báo giá giúp mình [vấy](object_type) này
+    - báo giá giúp mình [áo coat](object_type) này
+    - báo giá giúp mình [áo yếm](object_type) này
+    - báo giá giúp tớ [bông tai](object_type) này
+    - báo giá giúp tớ [dày](object_type) này
+    - báo giá giúp tớ [shoe](object_type) này
+    - báo giá mình [bông tai](object_type) này với
+    - báo giá mình [khăn quàng](object_type) này với
+    - báo giá mình [quần jean](object_type) này với
+    - báo giá mình [đầm](object_type) này với
+    - báo giá tớ [quần](object_type) này với
+    - báo giá tớ [áo yếm](object_type) này với
+    - cho e hỏi giá bn ạ
+    - cho e hỏi giá bnhieu ạ
+    - cho e hỏi giá [shoe](object_type) này bao nhieu ạ
+    - cho e hỏi giá [áo coat](object_type) này bnhieu ạ
+    - cho e [khăn quàng](object_type) này bao nhiêu tiền ạ
+    - cho e [phụ kiện](object_type) này bao nhieu tiền ạ
+    - cho e xin giá sp này với ạ
+    - cho e xin giá sản phẩm này với ạ
+    - cho e [áo coat](object_type) này bnhieu tiền ạ
+    - cho e [áo jackets](object_type) này bn tiền ạ
+    - cho em hỏi giá bao nhieu ạ
+    - cho em hỏi giá bnhieu ạ
+    - cho em hỏi giá [thắt lưng](object_type) này bao nhieu ạ
+    - cho em xin giá sp này với ạ
+    - cho em xin giá sản phẩm này với ạ
+    - cho em xin giá với ạ
+    - cho em [áo yếm](object_type) này bnhieu tiền ạ
+    - cho mình hỏi giá bn ạ
+    - cho mình hỏi giá [bông tai](object_type) này bn ạ
+    - cho mình hỏi giá [dress](object_type) này bn ạ
+    - cho mình hỏi giá [quần jean](object_type) này bn ạ
+    - cho mình [thắt lưng](object_type) này bao nhiêu tiền ạ
+    - cho mình xin giá sản phẩm này với ạ
+    - cho mình xin giá với ạ
+    - cho tớ hỏi giá bao nhieu ạ
+    - cho tớ hỏi giá [áo jacket](object_type) này bn ạ
+    - cho tớ hỏi giá [áo jackets](object_type) này bnhieu ạ
+    - cho tớ [khăn quàng](object_type) này bao nhieu tiền ạ
+    - cho tớ [thắt lưng](object_type) này bn tiền ạ
+    - cho tớ xin giá sp này với ạ
+    - cho tớ xin giá với ạ
+    - [dress](object_type) này giá sao cậu
+    - [giày](object_type) này bao nhiêu tiền ạ
+    - [giày](object_type) này giá sao anh
+    - giá bao nhieu bạn
+    - giá bao nhiêu anh
+    - giá bao nhiêu bạn
+    - giá bao nhiêu chị
+    - giá bnhieu chị
+    - giá [bông tai](object_type) này bnhieu shop
+    - giá [giày](object_type) này bao nhiêu chị
+    - giá [quần](object_type) này bao nhiêu anh
+    - giá [shoe](object_type) này bn cậu
+    - giá [thắt lưng](object_type) này bn chị
+    - giá [vòng tay](object_type) này bn chị
+    - [phụ kiện](object_type) này bn tiền ạ
+    - [quần jean](object_type) này giá bao nhiêu ạ
+    - [quần](object_type) này bao nhiêu tiền ạ
+    - [thắt lưng](object_type) này giá bnhieu ạ
+    - [thắt lưng](object_type) này giá sao cậu
+    - [váy skirt](object_type) này bn tiền ạ
+    - [váy skirt](object_type) này giá bao nhieu ạ
+    - [váy skirt](object_type) này giá bao nhiêu ạ
+    - [váy skirt](object_type) này giá sao chị
+    - [vòng tay](object_type) này bao nhiêu tiền ạ
+    - [vòng tay](object_type) này giá sao shop
+    - [vấy](object_type) này giá sao bạn
+    - [áo coat](object_type) này giá bn ạ
+    - [áo jacket](object_type) này giá bnhieu ạ
+    - [áo khoác](object_type) này giá bao nhieu ạ
+    - [áo yếm](object_type) này bao nhiêu tiền ạ
