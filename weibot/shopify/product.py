@@ -13,7 +13,11 @@ def _build_query(sex,product_type,min_price,max_price)->str:
     if product_type != None:
         if len(query) > 0:
             query += " AND "
-        query += f"tag:{product_type}"
+        print(type(product_type))
+        if type(product_type) == list:
+            query += " AND ".join([f"tag:{pd}" for pd in product_type])   
+        if type(product_type) == str:
+            query += f"tag:{product_type}"
 
     if min_price != None:
         if len(query) > 0:
@@ -24,7 +28,7 @@ def _build_query(sex,product_type,min_price,max_price)->str:
         if len(query) > 0:
             query += " AND "
         query += f"price:<={max_price}"
-
+    
     return query
 
 def getProductVariants():
@@ -66,7 +70,6 @@ def getProductVariants():
                     }
                 }
             }
-
             """
         )
 
@@ -80,7 +83,7 @@ def getProducts(sex=None,product_type=None,min_price=None,max_price=None):
         response = shopify.GraphQL().execute(
             f"""
             {{
-                products(first: 2, query:"{query}") {{
+                products(first: 5, query:"{query}") {{
                     edges {{
                         node {{
                             id
@@ -121,4 +124,4 @@ def getProducts(sex=None,product_type=None,min_price=None,max_price=None):
         return json.loads(response)["data"]["products"]["edges"]
 
 if __name__ == "__main__":
-    print(getProducts(product_type="áo thun", min_price=400000, max_price=800000))
+    print(getProducts(product_type=["quần short"], sex="nam"))
