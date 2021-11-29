@@ -1,0 +1,2623 @@
+{
+    "rasa_nlu_data": {
+        "common_examples": [
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "alo, bạn ơii",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "anh ơii",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "bạn ơi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "e chào cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "e xin chào bạn ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "e xin chào cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "em xin chào anh",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "halo, anh ơii",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "hello cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "hello, shop ơii",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "helo lily",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "lily ơii",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "mình xin chào bạn ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "mình xin chào chị",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "mình xin chào chị nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "mình xin chào shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "shop ơi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "tớ xin chào shop ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "xin chào buổi sáng chị",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "greet",
+                "text": "xin chào, bạn ới",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "bi bi chị",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "bye bye bạn nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "bye bye chị nha",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "bye bạn nha",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "bye cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "bye hẹn gặp lại nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "bye hẹn gặp lại sau",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "chào tạm biệt anh nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "chào tạm biệt chị",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "chào tạm biệt chị gặp lại sau nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "good bye bạn nha",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "good bye cậu hẹn gặp lại sau nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "good bye lily hẹn gặp lại nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "good bye lily nha",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "good bye nói chuyện sau",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "good bye shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "tạm biệt anh hẹn gặp lại sau",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "tạm biệt cậu hẹn gặp lại nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "tạm biệt em see you nha",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "bye",
+                "text": "tạm biệt see you again nha",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "chính xác rồi lily",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "oki chị",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "okila nha cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "ooke",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "ooke nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "phải rồi chị",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "uh ooke",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "uh đúng rồi cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "uhm oki shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "uhm okii anh",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "ưhm chính xác rồi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "ưhm ooke",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "ừ chính xác rồi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "ừ ok",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "ừ okay",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "ừ oki shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "ừ phải r bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "ừm okie",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "ừm okla",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "agree",
+                "text": "ừm phải rồi em",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "cảm ơn",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "dạ cảm ơn ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "dạ thak ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "dạ thank chị ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "dạ thank you bạn ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "dạ thanks cậu ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "e cảm ơn nha",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "thak",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "thak nha",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "thank you shop nha",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "tớ cảm ơn bạn nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "tớ cảm ơn em nha",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "tớ cảm ơn shop nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "vâng thak nha",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "vâng thank anh nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "vâng thank you lily nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "vâng thanks lily nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "vô cùng cảm ơn anh ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "vô cùng cảm ơn bạn ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "thank",
+                "text": "vô cùng cảm ơn lily ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "chưa được",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "chưa được, k chuẩn đâu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "chẳng cần",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "k chính xác",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "k có",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "không chuẩn rồi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "không nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "không phải r",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "ko nhé",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "ko sai r",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "ko sai rồi anh",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "ko đúng",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "ko, k đúng đâu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "ko, không chuẩn đâu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "no nhầm lẫn rồi anh",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "no, không đúng đâu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "thôi khỏi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "deny",
+                "text": "đừng",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "cho e gặp chủ shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "cho gặp admin được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "cho gặp chị chủ đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "cho gặp chị chủ được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "cho gặp human đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "cho gặp nhân viên được ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "cho mình gặp nhân viên",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "chuyển sang chế độ ib với human đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "chuyển sang chế độ ib với người đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "chuyển sang chế độ nhắn tin với ad đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "chuyển sang inbox với human đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "chuyển sang inbox với người đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "chuyển sang nhắn tin với người đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "e cần gặp chủ shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "e muốn gặp ad",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "em cần gặp người",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "human vào inbox đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "mình muốn gặp chị chủ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "mình muốn gặp người",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_human",
+                "text": "người vào nhắn tin đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "bạn trợ giúp e việc này được ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "có thể giúp đỡ e được không shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "có thể hỗ trợ tớ được không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "e có chuyện cần giúp chị ơi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "e cần trợ giúp",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "em giúp đỡ e việc này được ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "em ơi, e cần hỗ trợ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "em ơi, em cần hỗ trợ trợ giúp em với",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "em ơi, tớ cần hỗ trợ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "giúp em với anh ơi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "giúp mình được không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "giúp tớ với ơi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "giúp đỡ e được không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "lily ơi, em cần giúp đỡ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "mình cần giúp đỡ ơi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "trợ giúp tớ được k bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "tớ có chuyện cần giúp chị ơi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "tớ có chuyện cần giúp lily ơi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "tớ cần trợ giúp cậu ơi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_help",
+                "text": "ơi, tớ cần hỗ trợ giúp đỡ em với",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "anh cho e hỏi chút được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "bạn cho mình hỏi chút được không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "cho e hỏi chút được k anh",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "cho e hỏi chút được k bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "cho e hỏi chút được không bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "cho em hỏi chút được ko bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "cho mình hỏi chút được không chị",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "cho mình hỏi chút được ko shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "cho tớ hỏi chút được k anh",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "chị cho e hỏi chút được ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "cậu cho e hỏi chút được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "cậu cho em hỏi chút được ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "e đang muốn hỏi bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "em đang muốn hỏi bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "em đang muốn hỏi lily",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "hỏi lily một câu được không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "hỏi shop một câu được không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "lily cho e hỏi chút được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "lily cho tớ hỏi chút được ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_ask_question",
+                "text": "shop cho em hỏi chút được không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "anh ơi auto trả lời ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "auto trả lời à",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "bot phải k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "bot trả lời",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "chatbot ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "chị dùng auto rep à",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "chị dùng trả lời tự động hả",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "chị ơi trả lời tự động hả",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "là auto trả lời hay chủ shop đó hả",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "là trả lời tự động hay human đó ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "là tự động reply hay admin đó hả",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "shop dùng tự động rep à",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "shop sử dung trả lời tự động hay admin đó",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "shop sử dung trả lời tự động hay chị chủ đó",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "shop sử dung trả lời tự động hay chủ shop đó",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "shop sử dung tự động reply hay admin đó",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "shop ơi bot à",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "trả lời tự động trả lời hả",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "tự động rep phải không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_is_bot",
+                "text": "tự động trả lời à",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "bạn giới thiệu đôi chút về bản thân đi nào",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "bạn tự giới thiệu bản thân đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "cậu có thể giới thiệu chút thông tin gì đó đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "cậu giới thiệu đôi chút về mình đi nào",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "giới thiệu cho em chút thông tin về bạn được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "giới thiệu cho mình chút thông tin về bạn được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "giới thiệu cho tớ chút thông tin về cậu được không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "giới thiệu cho tớ chút thông tin về em được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "giới thiệu gì đó về bản thân đi bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "giới thiệu gì đó về bản thân đi cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "giới thiệu về cậu trước đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "giới thiệu về lily trước đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "giới thiệu đôi chút về bản thân đi cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "lily giới thiệu đi nào",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "lily giới thiệu đôi chút về bản thân đi nào",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "lily giới thiệu đôi chút về mình đi nào",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "lily tự giới thiệu bản thân đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "tự giới thiệu bản thân đi cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "tự giới thiệu đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "ask_intro_overview",
+                "text": "tự giới thiệu đi lily",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "bao nhiêu tuổi rồi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "bạn bao nhieu tuổi rồi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "cậu bn tuổi đó",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "e biết tuổi bạn được ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "em bao nhiêu tuổi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "em biết tuổi cậu được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "lily bnhieu tuổi r",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "mình biết tuổi lily được ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "mình biết tuổi được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "năm nay bn tuổi rồi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "năm nay lily bn tuổi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "tuổi của bạn bnhieu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "tuổi của lily bnhieu đó",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "tính đến nam nay thì bạn bao nhiêu tuổi đó",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "tính đến nam nay thì cậu bao nhieu tuổi đó",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "tính đến nam nay thì lily bao nhieu tuổi rồi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "tính đến nam nay thì lily bao nhiêu tuổi hả",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "đến năm nay thì em được bao nhieu tuổi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "đến năm nay thì được bao nhiêu tuổi r",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_age",
+                "text": "đến năm nay thì được bnhieu tuổi rồi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "bạn có giới tính là gì",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "cho biết giới tính của lily là gì",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "cho hỏi giới tính của bạn là gì",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "cho hỏi giới tính của lily là gì",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "cho mình biết giới tính của cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "cho mình hỏi giới tính của lily",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "cậu là nam phải không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "giới tính của bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "giới tính của bạn có phải là nam ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "giới tính của bạn có phải là nữ ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "giới tính của bạn là nữ hay nam",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "giới tính của cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "giới tính của cậu có phải là nam ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "giới tính của cậu là gì thế",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "giới tính của cậu là nam phải k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "giới tính của em là gì đó",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "lily là nữ phải k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "là boy hay girl",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "là boy hay girl đó cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "self_ask_gender",
+                "text": "là nữ hay nam đó lily",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 39,
+                        "entity": "object_type",
+                        "start": 31,
+                        "value": "áo khoác"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "anh cho em hỏi bên mình có bán áo khoác k ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 18,
+                        "entity": "object_type",
+                        "start": 11,
+                        "value": "vòng cổ"
+                    },
+                    {
+                        "end": 25,
+                        "entity": "gender",
+                        "start": 19,
+                        "value": "unisex"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "anh có bán vòng cổ unisex k em",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 26,
+                        "entity": "object_type",
+                        "start": 16,
+                        "value": "khăn quàng"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "bên mình có bán khăn quàng k",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 20,
+                        "entity": "object_type",
+                        "start": 16,
+                        "value": "quần"
+                    },
+                    {
+                        "end": 27,
+                        "entity": "color",
+                        "start": 25,
+                        "value": "đỏ"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "bên mình có bán quần màu đỏ ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 22,
+                        "entity": "object_type",
+                        "start": 16,
+                        "value": "áo yếm"
+                    },
+                    {
+                        "end": 26,
+                        "entity": "gender",
+                        "start": 23,
+                        "value": "nam"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "bên mình có bán áo yếm nam k",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 32,
+                        "entity": "object_type",
+                        "start": 26,
+                        "value": "áo yếm"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "cho e hỏi bên mình có bán áo yếm ko ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 36,
+                        "entity": "object_type",
+                        "start": 27,
+                        "value": "thắt lưng"
+                    },
+                    {
+                        "end": 39,
+                        "entity": "gender",
+                        "start": 37,
+                        "value": "nữ"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "cho em hỏi bên mình có bán thắt lưng nữ ko ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 17,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "khăn quàng"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "có bán khăn quàng ko chị",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 17,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "khăn quàng"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "có bán khăn quàng ko shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 11,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "shoe"
+                    },
+                    {
+                        "end": 15,
+                        "entity": "gender",
+                        "start": 12,
+                        "value": "nam"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "có bán shoe nam k",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 15,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "túi xách"
+                    },
+                    {
+                        "end": 32,
+                        "entity": "color",
+                        "start": 20,
+                        "value": "xanh da trời"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "có bán túi xách màu xanh da trời k bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 16,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "váy skirt"
+                    },
+                    {
+                        "end": 27,
+                        "entity": "color",
+                        "start": 21,
+                        "value": "đỏ đậm"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "có bán váy skirt màu đỏ đậm ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 14,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "áo coat"
+                    },
+                    {
+                        "end": 21,
+                        "entity": "gender",
+                        "start": 15,
+                        "value": "unisex"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "có bán áo coat unisex k bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 10,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "đầm"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "có bán đầm k",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 10,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "đầm"
+                    },
+                    {
+                        "end": 14,
+                        "entity": "gender",
+                        "start": 11,
+                        "value": "nam"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "có bán đầm nam k",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 7,
+                        "entity": "object_type",
+                        "start": 3,
+                        "value": "giày"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "có giày không",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 13,
+                        "entity": "object_type",
+                        "start": 3,
+                        "value": "khăn quàng"
+                    },
+                    {
+                        "end": 16,
+                        "entity": "gender",
+                        "start": 14,
+                        "value": "nữ"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "có khăn quàng nữ ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 16,
+                        "entity": "object_type",
+                        "start": 11,
+                        "value": "dress"
+                    },
+                    {
+                        "end": 25,
+                        "entity": "color",
+                        "start": 21,
+                        "value": "blue"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "cậu có bán dress màu blue ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 19,
+                        "entity": "object_type",
+                        "start": 11,
+                        "value": "áo khoác"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "cậu có bán áo khoác ko bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 14,
+                        "entity": "object_type",
+                        "start": 11,
+                        "value": "đầm"
+                    }
+                ],
+                "intent": "request_product",
+                "text": "cậu có bán đầm k",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 37,
+                        "entity": "object_type",
+                        "start": 28,
+                        "value": "váy skirt"
+                    }
+                ],
+                "intent": "request_info",
+                "text": "anh cho em xin ít thông tin váy skirt này được không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_info",
+                "text": "bạn cho em xin ít thông tin sp này được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_info",
+                "text": "bạn cho em xin ít thông tin sp này được ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_info",
+                "text": "bạn gửi em thông tin sản phẩm",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 32,
+                        "entity": "object_type",
+                        "start": 24,
+                        "value": "bông tai"
+                    }
+                ],
+                "intent": "request_info",
+                "text": "cho em xin ít thông tin bông tai này được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 32,
+                        "entity": "object_type",
+                        "start": 24,
+                        "value": "vòng tay"
+                    }
+                ],
+                "intent": "request_info",
+                "text": "cho em xin ít thông tin vòng tay này được ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 34,
+                        "entity": "object_type",
+                        "start": 26,
+                        "value": "vòng tay"
+                    }
+                ],
+                "intent": "request_info",
+                "text": "cho mình xin ít thông tin vòng tay này được không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_info",
+                "text": "cho tớ xin ít thông tin sản phẩm này được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 25,
+                        "entity": "object_type",
+                        "start": 18,
+                        "value": "vòng cổ"
+                    }
+                ],
+                "intent": "request_info",
+                "text": "cho xin thông tin vòng cổ này đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 36,
+                        "entity": "object_type",
+                        "start": 28,
+                        "value": "phụ kiện"
+                    }
+                ],
+                "intent": "request_info",
+                "text": "chị cho em xin ít thông tin phụ kiện này được ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_info",
+                "text": "có thông tin gì về sp này không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_info",
+                "text": "có thông tin gì về sp này không cậu",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_info",
+                "text": "có thông tin gì về sp này ko bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_info",
+                "text": "có thông tin gì về sp này ko em",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_info",
+                "text": "có thông tin gì về sp này ko shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 34,
+                        "entity": "object_type",
+                        "start": 27,
+                        "value": "áo coat"
+                    }
+                ],
+                "intent": "request_info",
+                "text": "cậu cho e xin ít thông tin áo coat này được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 24,
+                        "entity": "object_type",
+                        "start": 21,
+                        "value": "dày"
+                    }
+                ],
+                "intent": "request_info",
+                "text": "cậu gửi em thông tin dày này với",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 25,
+                        "entity": "object_type",
+                        "start": 16,
+                        "value": "áo jacket"
+                    }
+                ],
+                "intent": "request_info",
+                "text": "gửi e thông tin áo jacket này với",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 24,
+                        "entity": "object_type",
+                        "start": 17,
+                        "value": "áo coat"
+                    }
+                ],
+                "intent": "request_info",
+                "text": "gửi tớ thông tin áo coat này với",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 36,
+                        "entity": "object_type",
+                        "start": 28,
+                        "value": "túi xách"
+                    }
+                ],
+                "intent": "request_info",
+                "text": "shop cho e xin ít thông tin túi xách này được k",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 18,
+                        "entity": "object_type",
+                        "start": 14,
+                        "value": "giày"
+                    }
+                ],
+                "intent": "request_image",
+                "text": "cho e xem ảnh giày đó đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_image",
+                "text": "cho e xem ảnh được không shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 17,
+                        "entity": "object_type",
+                        "start": 14,
+                        "value": "bag"
+                    }
+                ],
+                "intent": "request_image",
+                "text": "cho e xin ảnh bag đó đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 22,
+                        "entity": "object_type",
+                        "start": 14,
+                        "value": "bông tai"
+                    }
+                ],
+                "intent": "request_image",
+                "text": "cho e xin ảnh bông tai đó đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 18,
+                        "entity": "object_type",
+                        "start": 14,
+                        "value": "giày"
+                    }
+                ],
+                "intent": "request_image",
+                "text": "cho e xin ảnh giày đó đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 21,
+                        "entity": "object_type",
+                        "start": 14,
+                        "value": "vòng cổ"
+                    }
+                ],
+                "intent": "request_image",
+                "text": "cho e xin ảnh vòng cổ đó đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_image",
+                "text": "cho e xin ảnh đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 25,
+                        "entity": "object_type",
+                        "start": 15,
+                        "value": "khăn quàng"
+                    }
+                ],
+                "intent": "request_image",
+                "text": "cho em xem ảnh khăn quàng đó đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 23,
+                        "entity": "object_type",
+                        "start": 15,
+                        "value": "phụ kiện"
+                    }
+                ],
+                "intent": "request_image",
+                "text": "cho em xem ảnh phụ kiện đó đi em",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 19,
+                        "entity": "object_type",
+                        "start": 15,
+                        "value": "shoe"
+                    }
+                ],
+                "intent": "request_image",
+                "text": "cho em xem ảnh shoe đó đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_image",
+                "text": "cho em xin ảnh được ko",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 20,
+                        "entity": "object_type",
+                        "start": 17,
+                        "value": "bag"
+                    }
+                ],
+                "intent": "request_image",
+                "text": "cho mình xem ảnh bag đó đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_image",
+                "text": "cho mình xem ảnh được không anh",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 20,
+                        "entity": "object_type",
+                        "start": 17,
+                        "value": "đầm"
+                    }
+                ],
+                "intent": "request_image",
+                "text": "cho mình xem ảnh đầm đó đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 25,
+                        "entity": "object_type",
+                        "start": 17,
+                        "value": "vòng tay"
+                    }
+                ],
+                "intent": "request_image",
+                "text": "cho mình xin ảnh vòng tay đó đi",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_image",
+                "text": "cho mình xin ảnh đi chị",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 19,
+                        "entity": "object_type",
+                        "start": 15,
+                        "value": "shoe"
+                    }
+                ],
+                "intent": "request_image",
+                "text": "cho tớ xem ảnh shoe đó đi shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_image",
+                "text": "có ảnh sp ko gửi em với",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_image",
+                "text": "gửi e ảnh được không",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_image",
+                "text": "gửi mình ảnh được không",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 3,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "bag"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "bag này còn mầu nào ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_color",
+                "text": "chị còn những màu nào ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 15,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "bông tai"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "chị ơi bông tai này còn những mầu gì ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 8,
+                        "entity": "object_type",
+                        "start": 4,
+                        "value": "bags"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "còn bags màu nào ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 9,
+                        "entity": "object_type",
+                        "start": 4,
+                        "value": "dress"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "còn dress màu nào ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_color",
+                "text": "còn mầu nào bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 13,
+                        "entity": "object_type",
+                        "start": 4,
+                        "value": "áo jacket"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "còn áo jacket màu nào ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 15,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "phụ kiện"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "cậu ơi phụ kiện này còn những màu nào ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 14,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "áo coat"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "cậu ơi áo coat này còn những mầu nào ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 4,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "giày"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "giày này có có những màu gì ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 10,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "khăn quàng"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "khăn quàng này còn mầu nào ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 10,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "khăn quàng"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "khăn quàng này có có những mầu nào ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 4,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "shoe"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "shoe này có mấy mầu ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 14,
+                        "entity": "object_type",
+                        "start": 8,
+                        "value": "áo yếm"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "shop ơi áo yếm này còn những mầu gì ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_color",
+                "text": "size này còn màu gì bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_color",
+                "text": "size này còn mầu gì bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 9,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "váy skirt"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "váy skirt này có mấy màu ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 8,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "vòng tay"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "vòng tay này còn màu gì ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 3,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "vấy"
+                    }
+                ],
+                "intent": "request_color",
+                "text": "vấy này còn mầu gì ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_color",
+                "text": "vậy còn những mầu nào ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 4,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "bags"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "bags này bnhieu tiền ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_price",
+                "text": "bao nhiêu tiền vậy bạn",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 15,
+                        "entity": "object_type",
+                        "start": 11,
+                        "value": "quần"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "báo giá em quần này với",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 23,
+                        "entity": "object_type",
+                        "start": 16,
+                        "value": "áo coat"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "báo giá giúp em áo coat này",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 8,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "bông tai"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "bông tai này bao nhiêu tiền ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 11,
+                        "entity": "object_type",
+                        "start": 6,
+                        "value": "dress"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "cho e dress này bao nhiêu tiền ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 22,
+                        "entity": "object_type",
+                        "start": 14,
+                        "value": "phụ kiện"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "cho e hỏi giá phụ kiện này bao nhiêu ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_price",
+                "text": "cho e xin giá với ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_price",
+                "text": "cho em hỏi giá bn ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_price",
+                "text": "cho tớ xin giá sản phẩm này với ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 14,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "áo coat"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "cho tớ áo coat này bnhieu tiền ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 16,
+                        "entity": "object_type",
+                        "start": 7,
+                        "value": "áo jacket"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "cho tớ áo jacket này bao nhiêu tiền ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 3,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "dày"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "dày này giá bao nhieu ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [],
+                "intent": "request_price",
+                "text": "giá bao nhieu shop",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 12,
+                        "entity": "object_type",
+                        "start": 4,
+                        "value": "bông tai"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "giá bông tai này bao nhieu chị",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 8,
+                        "entity": "object_type",
+                        "start": 4,
+                        "value": "giày"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "giá giày này bnhieu anh",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 4,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "quần"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "quần này giá sao chị",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 10,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "áo jackets"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "áo jackets này giá bao nhieu ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 8,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "áo khoác"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "áo khoác này bao nhiêu tiền ạ",
+                "faq_intent": null
+            },
+            {
+                "entities": [
+                    {
+                        "end": 6,
+                        "entity": "object_type",
+                        "start": 0,
+                        "value": "áo yếm"
+                    }
+                ],
+                "intent": "request_price",
+                "text": "áo yếm này giá sao chị",
+                "faq_intent": null
+            }
+        ]
+    }
+}
