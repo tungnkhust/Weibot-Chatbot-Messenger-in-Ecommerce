@@ -1,0 +1,1 @@
+web: rasa run --endpoints endpoints.yml --credentials credentials.yml
