@@ -35,6 +35,47 @@ slots:
     influence_conversation: false
     auto_fill: false
 
+  user_name:
+    type: text
+    influence_conversation: false
+    auto_fill: false
+
+  tmp_link:
+    type: text
+
+  intent:
+    type: text
+    influence_conversation: false
+    auto_fill: false
+
+  gender:
+    type: float
+    influence_conversation: false
+    auto_fill: false
+
+  product_ids:
+    type: list
+    influence_conversation: false
+
+  products:
+    type: list
+    influence_conversation: false
+
+  product_id:
+    type: float
+    influence_conversation: false
+    auto_fill: false
+
+  color:
+    type: text
+    influence_conversation: false
+    auto_fill: false
+
+  object_type:
+    type: list
+    influence_conversation: false
+    auto_fill: false
+
 responses:
   utter_greet_0:
     - text: "Chào bạn, mình là Lily trợ lý ảo của shop. Mình có thể giúp gì cho bạn ạ."
@@ -82,6 +123,10 @@ actions:
   - action_greet
   - action_reset_slots
   - action_request_product
+  - action_request_info
+  - action_request_image
+  - action_request_color
+  - action_request_price
 
 session_config:
   session_expiration_time: 60

@@ -67,3 +67,21 @@ rules:
     - intent: request_product
     - action: action_request_product
 
+  - rule: request_info
+    steps:
+    - intent: request_info
+    - action: action_request_info
+
+  - rule: request_image
+    steps:
+    - intent: request_image
+    - action: action_request_image
+  - rule: request_color
+    steps:
+    - intent: request_color
+    - action: action_request_color
+
+  - rule: request_price
+    steps:
+    - intent: request_price
+    - action: action_request_price

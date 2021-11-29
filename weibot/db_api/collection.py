@@ -2,7 +2,7 @@ import json
 from config import APP_PASSWORD, SHOP_URL, API_VERSION
 import shopify
 
-def getCollections():
+def get_collections():
     with shopify.Session.temp(SHOP_URL, API_VERSION, APP_PASSWORD):
         response = shopify.GraphQL().execute(
             """
@@ -22,4 +22,4 @@ def getCollections():
         return json.loads(response)["data"]["collections"]["edges"]
 
 if __name__ == "__main__":
-    print(getCollections())
+    print(get_collections())
