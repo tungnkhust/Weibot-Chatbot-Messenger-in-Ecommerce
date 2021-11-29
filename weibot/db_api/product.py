@@ -1,33 +1,35 @@
 import json
-from config import APP_PASSWORD, SHOP_URL, API_VERSION
+from db_api.config import APP_PASSWORD, SHOP_URL, API_VERSION
 import shopify
 
-def _build_query(sex,product_type,min_price,max_price)->str:
+
+def _build_query(sex, product_type, min_price, max_price) -> str:
     query = ""
 
-    if sex != None:
+    if sex is not None:
         if len(query) > 0:
             query += " AND "
         query += f"tag:{sex}"
     
-    if product_type != None:
+    if product_type is not None:
         if len(query) > 0:
             query += " AND "
         query += f"tag:{product_type}"
 
-    if min_price != None:
+    if min_price is not None:
         if len(query) > 0:
             query += " AND "
         query += f"price:>={min_price}"
 
-    if max_price != None:
+    if max_price is not None:
         if len(query) > 0:
             query += " AND "
         query += f"price:<={max_price}"
 
     return query
 
-def getProductVariants():
+
+def get_product_variants():
     with shopify.Session.temp(SHOP_URL, API_VERSION, APP_PASSWORD): 
         response = shopify.GraphQL().execute(
             """
@@ -72,10 +74,11 @@ def getProductVariants():
 
         return json.loads(response)["data"]["productVariants"]["edges"]
 
-def getProducts(sex=None,product_type=None,min_price=None,max_price=None):
+
+def get_products(sex=None, product_type=None, min_price=None, max_price=None):
     with shopify.Session.temp(SHOP_URL, API_VERSION, APP_PASSWORD):
         
-        query = _build_query(sex,product_type,min_price,max_price)
+        query = _build_query(sex, product_type, min_price, max_price)
         
         response = shopify.GraphQL().execute(
             f"""
@@ -119,6 +122,3 @@ def getProducts(sex=None,product_type=None,min_price=None,max_price=None):
         )
         
         return json.loads(response)["data"]["products"]["edges"]
-
-if __name__ == "__main__":
-    print(getProducts(product_type="áo thun", min_price=400000, max_price=800000))
