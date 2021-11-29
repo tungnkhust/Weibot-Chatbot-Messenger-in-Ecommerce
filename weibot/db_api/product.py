@@ -1,5 +1,5 @@
 import json
-from db_api.config import APP_PASSWORD, SHOP_URL, API_VERSION
+from config import APP_PASSWORD, SHOP_URL, API_VERSION
 import shopify
 
 
@@ -31,7 +31,6 @@ def _build_query(sex, product_type, min_price, max_price) -> str:
         query += f"price:<={max_price}"
     
     return query
-
 
 def get_product_variants():
     with shopify.Session.temp(SHOP_URL, API_VERSION, APP_PASSWORD): 
