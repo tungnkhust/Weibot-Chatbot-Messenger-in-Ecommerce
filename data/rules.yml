@@ -37,30 +37,252 @@ rules:
     - intent: ask_is_bot
     - action: utter_is_bot
 
+  - rule: ask_about_love
+    steps:
+    - intent: ask_about_love
+    - action: utter_about_love
+
+  - rule: user_want_love
+    steps:
+    - intent: user_want_love
+    - action: utter_want_love
+
+  - rule: ask_love_how
+    steps:
+    - intent: ask_love_how
+    - action: utter_love_how
+
+  - rule: ask_love_when
+    steps:
+    - intent: ask_love_when
+    - action: utter_love_when
+
+  - rule: ask_love_user_lover
+    steps:
+    - intent: ask_love_user_lover
+    - action: utter_user_lover
+
+  - rule: ask_love_lily_lover
+    steps:
+    - intent: ask_love_lily_lover
+    - action: utter_lily_lover
+
+  - rule: ask_love_lily_love
+    steps:
+    - intent: ask_love_lily_love
+    - action: utter_lily_love
+
+  - rule: say_love
+    steps:
+    - intent: say_love
+    - action: utter_say_love
+
+  - rule: ask_love_together
+    steps:
+    - intent: ask_love_together
+    - action: utter_love_together
+
+  - rule: ask_love_why
+    steps:
+    - intent: ask_love_why
+    - action: utter_love_why
+
+  - rule: feeling_fall_in_love
+    steps:
+    - intent: feeling_fall_in_love
+    - action: utter_fall_in_love
+
   - rule: ask_intro_overview
     steps:
     - intent: ask_intro_overview
-    - action: utter_self_intro
+    - action: utter_intro_overview
 
   - rule: self_ask_name
     steps:
     - intent: self_ask_name
-    - action: utter_ask_name
+    - action: utter_intro_name
 
   - rule: self_ask_age
     steps:
     - intent: self_ask_age
-    - action: utter_ask_age
+    - action: utter_intro_age
 
   - rule: self_ask_feature
     steps:
     - intent: self_ask_feature
-    - action: utter_ask_feature
+    - action: utter_intro_feature
+
+  - rule: self_ask_where_born
+    steps:
+    - intent: self_ask_where_born
+    - action: utter_intro_where_born
+
+  - rule: self_ask_weight
+    steps:
+    - intent: self_ask_weight
+    - action: utter_intro_weight
+
+  - rule: self_ask_height
+    steps:
+    - intent: self_ask_height
+    - action: utter_intro_height
+
+  - rule: self_ask_family
+    steps:
+    - intent: self_ask_family
+    - action: utter_intro_family
+
+  - rule: self_ask_creator
+    steps:
+    - intent: self_ask_creator
+    - action: utter_intro_creator
 
   - rule: self_ask_gender
     steps:
     - intent: self_ask_gender
-    - action: utter_ask_gender
+    - action: utter_intro_gender
+
+  - rule: self_ask_hobbies
+    steps:
+    - intent: self_ask_hobbies
+    - action: utter_intro_hobbies
+
+  - rule: self_ask_diet
+    steps:
+    - intent: self_ask_diet
+    - action: utter_intro_diet
+
+  - rule: self_ask_dont_like
+    steps:
+    - intent: self_ask_dont_like
+    - action: utter_intro_dont_like
+
+  - rule: self_ask_like_sport
+    steps:
+    - intent: self_ask_like_sport
+    - action: utter_intro_like_sport
+
+  - rule: self_ask_like_film
+    steps:
+    - intent: self_ask_like_film
+    - action: utter_intro_like_film
+
+  - rule: self_ask_like_book
+    steps:
+    - intent: self_ask_like_book
+    - action: utter_intro_like_book
+
+  - rule: self_ask_like_travel
+    steps:
+    - intent: self_ask_like_travel
+    - action: utter_intro_like_travel
+
+  - rule: self_ask_like_game
+    steps:
+    - intent: self_ask_like_game
+    - action: utter_intro_like_game
+
+  - rule: self_ask_like_doing
+    steps:
+    - intent: self_ask_like_doing
+    - action: utter_intro_like_doing
+
+  - rule: self_intro_ask_language
+    steps:
+    - intent: self_intro_ask_language
+    - action: utter_intro_ask_language
+
+  - rule: self_intro_ask_howbuilt
+    steps:
+    - intent: self_intro_ask_howbuilt
+    - action: utter_intro_ask_howbuilt
+
+  - rule: feel_boring
+    steps:
+    - intent: feel_boring
+    - action: utter_react_feel_boring
+
+  - rule: feel_angry
+    steps:
+    - intent: feel_angry
+    - action: utter_react_feel_angry
+
+  - rule: feel_hungry
+    steps:
+    - intent: feel_hungry
+    - action: utter_react_feel_hungry
+
+  - rule: feel_thirsty
+    steps:
+    - intent: feel_thirsty
+    - action: utter_react_feel_thirsty
+
+  - rule: feel_happy
+    steps:
+    - intent: feel_happy
+    - action: utter_react_feel_happy
+
+  - rule: feel_lonely
+    steps:
+    - intent: feel_lonely
+    - action: utter_react_feel_lonely
+
+  - rule: feel_sleep
+    steps:
+    - intent: feel_sleep
+    - action: utter_react_feel_sleep
+
+
+  - rule: feel_tired
+    steps:
+    - intent: feel_tired
+    - action: utter_react_feel_tired
+
+  - rule: feel_sick
+    steps:
+    - intent: feel_sick
+    - action: utter_react_feel_sick
+
+  - rule: react_stupid
+    steps:
+    - intent: react_stupid
+    - action: utter_reply_react_stupid
+
+  - rule: react_no_smart
+    steps:
+    - intent: react_no_smart
+    - action: utter_reply_react_no_smart
+
+  - rule: react_repeated
+    steps:
+    - intent: react_repeated
+    - action: utter_reply_react_repeated
+
+  - rule: react_bot_no_understand
+    steps:
+    - intent: react_bot_no_understand
+    - action: utter_reply_react_no_understand
+
+  - rule: react_angry_about_bot
+    steps:
+    - intent: react_angry_about_bot
+    - action: utter_reply_react_angry_about_bot
+
+  - rule: react_angry_bot
+    steps:
+    - intent: react_angry_bot
+    - action: utter_reply_react_angry_bot
+
+  - rule: react_good_bot
+    steps:
+    - intent: react_good_bot
+    - action: utter_reply_react_good_bot
+
+
+  - rule: react_smart_bot
+    steps:
+    - intent: react_smart_bot
+    - action: utter_reply_react_smart_bot
 
   - rule: request_product
     steps:

@@ -31,7 +31,22 @@
   ```
 # Run weibot
 
-### Step 1: Connect to facebook messenger channel
+
+### Step 1: Run rasa service
+```bash
+rasa run --endpoints endpoints.yml --credentials credentials.yml
+```
+Note: Before run service, you must provide model. You can train model with command line:
+```bash
+rasa train -c config.yml -d domain.yml 
+```
+
+### Step 2: Run rasa action server
+```bash
+rasa run actions --debug
+```
+
+### Step 3: Connect to facebook messenger channel
 - Collected `secret` and `page-access-token` on facebook app and add to file `credentials.yml`
 - Set field `verify` with any string to verify webhook
 - Run ngrok to map local port 5005 (rasa) to public port:
@@ -41,17 +56,3 @@ ngrok http 5005
 - Add url(https) after mapping of ngrok with format to facebook app:
 `https://<host>:<port>/webhooks/facebook/webhook` in messenger setting of facebook app.
 When add url, facebook request verify url, you can pass `verify` in `credentials.yml`.
-
-### Step 2: Run rasa service
-```bash
-rasa run --endpoints endpoints.yml --credentials credentials.yml
-```
-Note: Before run service, you must provide model. You can train model with command line:
-```bash
-rasa train -c config.yml -d domain.yml 
-```
-
-### Step 3: Run rasa action server
-```bash
-rasa run actions --debug
-```

@@ -4,7 +4,6 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from db_api.product import search_products
-from actions.utils.product_utils import get_shop_url
 
 
 class ActionRequestColor(Action):
