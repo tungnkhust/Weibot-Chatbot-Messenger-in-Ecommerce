@@ -1,64 +1,57 @@
-# Chatbot-Messenger-in-Ecommerce
+# Wetbot-Messenger-in-Ecommerce
 
 ## 1. Prerequisites
 
-- Python: 3.8.x
+- Python: 3.8.8
 
-## 2. Environtment Setup
+## 2. Environment Setup
 
 - Step 1: Clone project
-
+  
   ```bash
-  git clone https://github.com/tungnkhust/Chatbot-Messenger-in-Ecommerce.git
+  git clone git@github.com:tungnkhust/Weibot-Chatbot-Messenger-in-Ecommerce.git
   ```
 
-- Step 2: Change directory
-
+- Step 3: Create env
   ```bash
-  cd chatbot-messenger-in-ecommerce
+  cp .env.example .env
+  ```
+  ```bash
+  export PYTHONPATH=./
   ```
 
-- Step 3: Create venv
-
-  ```bash
-  python -m venv ./.venv
-  ```
-
-- Step 4: Activate venv
-
-  ```bash
-  # Window PowerShell
-  ./.venv/Scripts/Activate.ps1
-
-  # Linux
-  source ./.venv/bin/activate
-  ```
-
-- Step 5: Install Python packages
+- Step 4: Install Python packages
 
   ```bash
   pip install -r requirements.txt
   ```
-
+  If install rasa slowly you can install  pip with version: 20.2
+  ```bash
+  pip install --upgrade pip==20.2 
+  ```
 # Run weibot
 
-Step 1:
-
-- Collected `secret` and `page-access-token` on facebook app and add to `credentials.yml`
+### Step 1: Connect to facebook messenger channel
+- Collected `secret` and `page-access-token` on facebook app and add to file `credentials.yml`
 - Set field `verify` with any string to verify webhook
-
-Step 2: run rasa service
-
-```commandline
-rasa run --endpoints endpoints.yml --credentials credentials.yml
-```
-
-Step 2: run ngrok to map local address to internet
-
-```commandline
+- Run ngrok to map local port 5005 (rasa) to public port:
+```bash
 ngrok http 5005
 ```
+- Add url(https) after mapping of ngrok with format to facebook app:
+`https://<host>:<port>/webhooks/facebook/webhook` in messenger setting of facebook app.
+When add url, facebook request verify url, you can pass `verify` in `credentials.yml`.
 
-Step 3: Add url after mapping of ngrok with format to facebook app:
+### Step 2: Run rasa service
+```bash
+rasa run --endpoints endpoints.yml --credentials credentials.yml
+```
+Note: Before run service, you must provide model. You can train model with command line:
+```bash
+rasa train -c config.yml -d domain.yml 
+```
 
-`https://<host>:<port>/webhooks/facebook/webhook`
+### Step 3: Run rasa action server
+```bash
+rasa run actions --debug
+```

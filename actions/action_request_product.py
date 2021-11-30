@@ -3,7 +3,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
-from db_api import get_products, get_product_variants
+from db_api.product import get_product_by_id, search_products
 from actions.utils.product_utils import get_url
 
 
@@ -23,7 +23,7 @@ class ActionRequestProduct(Action):
 
         products = []
         for object_value in object_types:
-            _products = get_products(product_type=object_value)
+            _products = search_products(product_type=object_value)
             products.extend(_products)
 
         if len(products) == 0:

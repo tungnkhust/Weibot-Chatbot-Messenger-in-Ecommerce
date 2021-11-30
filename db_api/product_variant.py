@@ -1,21 +1,22 @@
 import json
-import os
-from dotenv import load
 import shopify
-
-load()
-
-API_KEY = os.getenv("API_KEY")
-APP_PASSWORD = os.getenv("APP_PASSWORD")
-SHOP_URL = os.getenv("SHOP_URL")
-API_VERSION = os.getenv("API_VERSION")
+from db_api.config import API_KEY, API_VERSION, APP_PASSWORD, SHOP_URL
+from typing import Optional, Text, Union, List, Any
 
 
-def search_product_variants(product_id,
-                            color=None,
-                            size=None,
-                            min_price=None,
-                            max_price=None):
+def search_product_variants(
+        product_id: int,
+        color: Optional[Union[Text, List[Text]]] = None,
+        size: Optional[Union[Any, List[Any]]] = None,
+        min_price: Optional[int] = None,
+        max_price: Optional[int] = None,
+):
+    if isinstance(color, Text):
+        color = [color]
+
+    if isinstance(size, List) is False:
+        size = [size]
+
     with shopify.Session.temp(SHOP_URL, API_VERSION, APP_PASSWORD):
         response = shopify.GraphQL().execute(
             """
@@ -47,11 +48,11 @@ def search_product_variants(product_id,
 
         to_removes = []
 
-        if color != None:
+        if color is not None:
             for (idx, variant) in enumerate(variants):
                 if variant["node"]["selectedOptions"][0][
                         "name"] == "Màu sắc" and variant["node"][
-                            "selectedOptions"][0]["value"] == color:
+                            "selectedOptions"][0]["value"] in color:
                     pass
                 else:
                     to_removes.append(idx)
@@ -60,11 +61,11 @@ def search_product_variants(product_id,
 
             to_removes = []
 
-        if size != None:
+        if size is not None:
             for (idx, variant) in enumerate(variants):
                 if variant["node"]["selectedOptions"][1][
                         "name"] == "Kích cỡ" and variant["node"][
-                            "selectedOptions"][1]["value"] == size:
+                            "selectedOptions"][1]["value"] in size:
                     pass
                 else:
                     to_removes.append(idx)
@@ -73,7 +74,7 @@ def search_product_variants(product_id,
 
             to_removes = []
 
-        if min_price != None:
+        if min_price is not None:
             for (idx, variant) in enumerate(variants):
                 if int(variant["node"]["price"]) >= min_price:
                     pass
@@ -84,7 +85,7 @@ def search_product_variants(product_id,
 
             to_removes = []
 
-        if max_price != None:
+        if max_price is not None:
             for (idx, variant) in enumerate(variants):
                 if int(variant["node"]["price"]) <= max_price:
                     pass

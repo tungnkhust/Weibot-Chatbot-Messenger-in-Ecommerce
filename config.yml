@@ -8,6 +8,7 @@ pipeline:
   - name: "DIETClassifier"
     entity_recognition: True
     epochs: 20
+    constrain_similarities: true
   - name: ResponseSelector
     epochs: 20
 

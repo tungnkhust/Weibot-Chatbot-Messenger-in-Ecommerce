@@ -1,18 +1,17 @@
 import json
-import os
-from dotenv import load
 import shopify
-
-load()
-
-API_KEY = os.getenv("API_KEY")
-APP_PASSWORD = os.getenv("APP_PASSWORD")
-SHOP_URL = os.getenv("SHOP_URL")
-API_VERSION = os.getenv("API_VERSION")
+from typing import Text, Union, List, Dict, Optional
+from db_api.config import API_KEY, API_VERSION, APP_PASSWORD, SHOP_URL
 
 
-def _build_query(gender, product_type, min_price, max_price, color,
-                 size) -> str:
+def _build_query(
+        gender: Optional[Text] = None,
+        product_type: Optional[Text] = None,
+        min_price: Optional[int] = None,
+        max_price: Optional[int] = None,
+        color: Optional[Text] = None,
+        size: Optional[Text] = None
+) -> str:
     query = ""
 
     if gender is not None:
@@ -57,12 +56,15 @@ def _build_query(gender, product_type, min_price, max_price, color,
     return query
 
 
-def search_products(gender=None,
-                    product_type=None,
-                    min_price=None,
-                    max_price=None,
-                    color=None,
-                    size=None):
+def search_products(
+        gender: Optional[Text] = None,
+        product_type: Optional[Text] = None,
+        min_price: Optional[int] = None,
+        max_price: Optional[int] = None,
+        color: Optional[Text] = None,
+        size: Optional[Union[int, Text]] = None
+):
+
     with shopify.Session.temp(SHOP_URL, API_VERSION, APP_PASSWORD):
 
         query = _build_query(gender, product_type, min_price, max_price, color,
@@ -111,7 +113,9 @@ def search_products(gender=None,
         return json.loads(response)["data"]["products"]["edges"]
 
 
-def get_product_by_id(product_id):
+def get_product_by_id(
+        product_id: Text
+):
     with shopify.Session.temp(SHOP_URL, API_VERSION, APP_PASSWORD):
         response = shopify.GraphQL().execute(
             """
@@ -151,8 +155,3 @@ def get_product_by_id(product_id):
 
         return json.loads(response)["data"]["product"]
 
-
-if __name__ == "__main__":
-    # print(get_products(product_type=["quần short"], gender="nam"))
-    # print(get_product_variants_by_product_id(product_id="gid://shopify/Product/7459202826454", color="Xanh dương", size="L"))
-    print(search_products(product_type="áo len", color="Đỏ", size="S"))

@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.0"
 
 intents:
   - greet
@@ -32,49 +32,80 @@ entities:
 slots:
   greeted:
     type: bool
+    initial_value: false
     influence_conversation: false
-    auto_fill: false
+    mappings:
+      - type: custom
 
   user_name:
     type: text
     influence_conversation: false
-    auto_fill: false
+    mappings:
+      - type: custom
 
   tmp_link:
     type: text
+    mappings:
+      - type: custom
 
   intent:
     type: text
     influence_conversation: false
-    auto_fill: false
-
-  gender:
-    type: float
-    influence_conversation: false
-    auto_fill: false
+    mappings:
+      - type: custom
 
   product_ids:
     type: list
     influence_conversation: false
+    mappings:
+      - type: custom
 
   products:
     type: list
     influence_conversation: false
+    mappings:
+      - type: custom
 
   product_id:
     type: float
     influence_conversation: false
-    auto_fill: false
+    mappings:
+      - type: custom
 
   color:
     type: text
     influence_conversation: false
-    auto_fill: false
+    mappings:
+    - type: from_entity
+      entity: color
+
+  price:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: price
+
+  size:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: size
+
+  gender:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: size
 
   object_type:
     type: list
     influence_conversation: false
-    auto_fill: false
+    mappings:
+    - type: from_entity
+      entity: object_type
 
 responses:
   utter_greet_0:
