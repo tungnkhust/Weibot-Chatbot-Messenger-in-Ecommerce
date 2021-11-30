@@ -30,9 +30,19 @@
   pip install --upgrade pip==20.2 
   ```
 # Run weibot
+### Step 1: Set config
+#### Credentials
+- Collected `secret` and `page-access-token` on facebook app and add to file `credentials.yml`
+- Set field `verify` with any string to verify webhook
+```yaml
+facebook:
+  verify: "rasa"
+  secret: "secret"
+  page-access-token: "page-access-token"
 
+```
 
-### Step 1: Run rasa service
+### Step 2: Run rasa service
 ```bash
 rasa run --endpoints endpoints.yml --credentials credentials.yml
 ```
@@ -41,14 +51,12 @@ Note: Before run service, you must provide model. You can train model with comma
 rasa train -c config.yml -d domain.yml 
 ```
 
-### Step 2: Run rasa action server
+### Step 3: Run rasa action server
 ```bash
 rasa run actions --debug
 ```
 
-### Step 3: Connect to facebook messenger channel
-- Collected `secret` and `page-access-token` on facebook app and add to file `credentials.yml`
-- Set field `verify` with any string to verify webhook
+### Step 4: Connect to facebook messenger channel
 - Run ngrok to map local port 5005 (rasa) to public port:
 ```bash
 ngrok http 5005
