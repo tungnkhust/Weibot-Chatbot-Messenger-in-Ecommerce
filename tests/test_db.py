@@ -1,20 +1,20 @@
-from db_api.product import search_products
+from db_api.product import search_products, get_product_by_id
+from db_api.product_variant import get_product_variant_by_id, search_product_variants
+from db_api.collection import get_collections
 
-
-def test_get_products(gender=None,
-                      product_type=None,
-                      min_price=None,
-                      max_price=None):
-    response = search_products(gender=gender,
-                               product_type=product_type,
-                               min_price=min_price,
-                               max_price=max_price)
+def test_get_products():
+    response = search_products(
+        product_type=None,
+        color='xanh than'
+    )
     print(response)
     print(len(response))
 
 
 if __name__ == '__main__':
-    test_get_products()
+    print(get_collections())
+    # test_get_products()
     print('-' * 50)
-    test_get_products(product_type="áo thun")
-    test_get_products(product_type="áo len")
+    # print(get_product_by_id("gid://shopify/Product/7461407162582"))
+    # print(search_product_variants(product_id="gid://shopify/Product/7461449793750", color="trắng"))
+

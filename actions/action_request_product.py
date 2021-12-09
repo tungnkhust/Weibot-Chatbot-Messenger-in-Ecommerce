@@ -5,6 +5,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from db_api.product import get_product_by_id, search_products
 from actions.utils.product_utils import get_url
+import random
 
 
 class ActionRequestProduct(Action):
@@ -19,12 +20,32 @@ class ActionRequestProduct(Action):
 
         object_types = tracker.get_latest_entity_values(entity_type="object_type")
         object_types = list(object_types)
-        events.append(SlotSet(key="object_type", value=object_types))
 
+        gender = list(tracker.get_latest_entity_values(entity_type="gender"))
+        if len(set(gender)) != 1:
+            gender = None
+
+        colors = list(tracker.get_latest_entity_values(entity_type="color"))
+        # prices = list(tracker.get_latest_entity_values(entity_type="size"))
+
+        events.append(SlotSet(key="object_type", value=object_types))
+        events.append(SlotSet(key="gender", value=gender))
         products = []
-        for object_value in object_types:
-            _products = search_products(product_type=object_value)
-            products.extend(_products)
+
+        if colors:
+            color = colors[0]
+            for object_value in object_types:
+                _products = search_products(product_type=object_value, color=color, gender=gender)
+                products.extend(_products)
+                events.append(SlotSet(key="color", value=color))
+        else:
+            for object_value in object_types:
+                _products = search_products(product_type=object_value, gender=gender)
+                products.extend(_products)
+
+        if len(products) > 10:
+            random.shuffle(products)
+            products = products[:10]
 
         if len(products) == 0:
             dispatcher.utter_message(text="Dạ, hiện tại mình không tìm thấy sản phẩm trong kho."
@@ -37,23 +58,9 @@ class ActionRequestProduct(Action):
         elements = []
         product_ids = []
         for product in products:
-            product_info = product["node"]
-            title = product_info["title"]
-            product_ids.append(product_info["id"])
-            image_url = product_info["images"]["edges"][0]["node"]["src"]
-            url = get_url(product_info)
-            element = {
-                "title": title,
-                "image_url": image_url,
-                "buttons": [
-                    {
-                        "type": "web_url",
-                        "url": url,
-                        "title": "Xem chi tiết",
-                    }
-                ]
-            }
+            element = product.to_messenger_element()
             elements.append(element)
+            product_ids.append(product.id)
 
         message = {
             "attachment": {

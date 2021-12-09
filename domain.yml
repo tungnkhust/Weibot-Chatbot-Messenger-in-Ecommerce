@@ -63,7 +63,22 @@ intents:
   - request_info
   - request_image
   - request_color
+  - request_size
   - request_price
+  - inform_product_info
+  - inform_user_info
+  - request_order
+  - request_pay
+  - ask_has_ship
+  - ask_ship_fee
+  - ask_confirm_free_ship
+  - ask_product_shop_sell
+  - ask_shop_address
+  - ask_shop_phone_number
+  - ask_shop_website
+  - ask_shop_name
+  - ask_shop_ecormerce
+  - ask_shop_bank_account
 
 entities:
   - color
@@ -111,7 +126,7 @@ slots:
       - type: custom
 
   product_id:
-    type: float
+    type: text
     influence_conversation: false
     mappings:
       - type: custom
@@ -138,7 +153,7 @@ slots:
         entity: size
 
   gender:
-    type: float
+    type: text
     influence_conversation: false
     mappings:
       - type: from_entity
@@ -183,10 +198,12 @@ responses:
     - text: "Có người nói với Lily rằng: Hãy yêu và cảm nhận thì mới hiểu được tình yêu là gì."
 
   utter_want_love:
-    - text: ""
+    - text: "Vậy yêu mình đi. Mình vẫn còn đang độc thân nè."
 
   utter_love_how:
-    - text: ""
+    - text: "Tình yêu là điều mà không ai biết được, nên cứ yêu và cảm nhận thôi ạ."
+    - text: "Hãy yêu nhau đi khi rừng thay lá\nHãy yêu nhau đi, giòng nước đã trôi xa\nNước trôi qua tim rong đầy trí nhớ\nNgày mãi mong chờ, ngày sẽ thiên thu"
+    - text: "Hãy yêu nhau đi bên đời nguy khốn\nHãy yêu nhau đi bù đắp cho trăm năm\nHãy yêu nhau đi cho ngày quên tháng\nDù đêm súng đạn, dù sáng mưa bom\nHãy trao cho nhau muôn ngàn yêu dấu\nHãy trao cho nhau hạnh phúc lẫn thương đau\nTrái tim cho ta nơi về nương náu\nĐược quên rất nhiều ngày tháng tiêu điều"
 
   utter_love_when:
     - text: "Bắc thang lên hỏi ông trời nhé, chứ mình sao biết được."
@@ -374,15 +391,57 @@ responses:
   utter_reply_react_smart_bot:
     - text: "Cảm ơn bạn nhé"
 
+  utter_send_image:
+    - text: "Mình gửi ảnh sản phẩm ạ:"
+    - text: "Bạn tham khảo ạ:"
+    - text: "Mình gửi ảnh ạ:"
+
+  utter_fall_back_1:
+    - text: "Dạ, hiện tại mình không tìm thấy sản phẩm trong kho. Bạn lên đây để tìm thêm nhé: https://bathangminh.myshopify.com"
+
+  utter_has_ship:
+    - text: "Dạ bên mình có ship ạ"
+
+  utter_ship_fee:
+    - text: "Dạ bạn xem bảng giá ship ạ"
+
+  utter_confirm_free_ship:
+    - text: "Dạ shop có miễn phí ship trong bán kính 5km ạ"
+
+  utter_shop_address:
+    - text: "Bạn có thể ghé thăm shop tại địa chỉ số 1 Đại Cồ Việt - Quận Hai Bà Trung - Hà Nội ạ"
+
+  utter_shop_phone_number:
+    - text: "Bạn liên hệ với shop qua số sau nha: 086887888 hoặc 098786868"
+
+  utter_shop_website:
+    - text: "Dạ bạn ghé thăm shop qua website sau để tìm hiểu thêm các sản phẩm ạ: https://bathangminh.myshopify.com/"
+
+  utter_shop_name:
+    - text: "Shop mình tên Bathangminh nha bạn, bạn ghé thăm shop qua page facebook sau nhé: https://www.facebook.com/profile.php?id=100073543977893"
+
+  utter_shop_ecormerce:
+    - text: "Dạ hiện tại shop chưa có cửa hàng trên các trang thương mại điện tử như shopee hoặc lazada ạ"
+
+  utter_shop_bank_account:
+    - text: "Dạ bạn có thể chuyển khoản qua số tài khoản sau ạ:\n
+            - STK: 01294098982324\n
+            - Ngân hàng:  Vietinbank chi nhánh Hai Bà Trưng\n
+            - Tên người nhận: Đăng Tuấn Tùng"
 
 actions:
   - action_greet
   - action_reset_slots
+  - action_intro_product
   - action_request_product
   - action_request_info
   - action_request_image
   - action_request_color
   - action_request_price
+  - action_request_size
+  - action_inform_product_info
+  - action_inform_user_info
+  - action_request_order
 
 session_config:
   session_expiration_time: 60

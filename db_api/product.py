@@ -2,6 +2,7 @@ import json
 import shopify
 from typing import Text, Union, List, Dict, Optional
 from db_api.config import API_KEY, API_VERSION, APP_PASSWORD, SHOP_URL
+from db_api.schema import Product
 
 
 def _build_query(
@@ -73,7 +74,7 @@ def search_products(
         response = shopify.GraphQL().execute(
             """
             query($query: String) {
-                products(first: 5, query: $query) {
+                products(first: 20, query: $query) {
                     edges {
                         node {
                             id
@@ -109,8 +110,13 @@ def search_products(
                 }
             }
             """, {"query": query})
+        nodes = json.loads(response)["data"]["products"]["edges"]
 
-        return json.loads(response)["data"]["products"]["edges"]
+        products = []
+        for node in nodes:
+            products.append(Product.from_dict(node))
+
+        return products
 
 
 def get_product_by_id(
@@ -153,5 +159,6 @@ def get_product_by_id(
             }
             """, {"id": product_id})
 
-        return json.loads(response)["data"]["product"]
+        node = json.loads(response)["data"]["product"]
+        return Product.from_dict(node)
 

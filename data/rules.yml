@@ -278,7 +278,6 @@ rules:
     - intent: react_good_bot
     - action: utter_reply_react_good_bot
 
-
   - rule: react_smart_bot
     steps:
     - intent: react_smart_bot
@@ -298,12 +297,23 @@ rules:
     steps:
     - intent: request_image
     - action: action_request_image
+
   - rule: request_color
     steps:
     - intent: request_color
     - action: action_request_color
 
+  - rule: request_size
+    steps:
+    - intent: request_size
+    - action: action_request_size
+
   - rule: request_price
     steps:
     - intent: request_price
     - action: action_request_price
+
+  - rule: ask_product_shop_sell
+    steps:
+    - intent: ask_product_shop_sell
+    - action: action_intro_product

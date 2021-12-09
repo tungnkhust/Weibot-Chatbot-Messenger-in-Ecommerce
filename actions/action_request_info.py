@@ -3,47 +3,43 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
+from db_api.product import search_products, get_product_by_id
+from db_api.product_variant import search_product_variants
 
 
-class ActionProductInfo(Action):
+class ActionRequestInfo(Action):
     def name(self) -> Text:
-        return "action_product_info"
+        return "action_request_info"
 
-    async def run(self, dispatcher: CollectingDispatcher,
-                  tracker: Tracker,
+    async def run(self, dispatcher: CollectingDispatcher, tracker: Tracker,
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        product_info = {
-            "id": "ms-01",
-            "name": "Babydoll Bow Dress",
-            "image_url": "https://cdn.shopify.com/s/files/1/0609/7046/7542/products/2015-04-08_Ashley_Look25_40663_19403_1080x.jpg?v=1636258665",
-            "size": "32",
-            "color": "white",
-            "price": 314
-        }
-        elements = []
-        element = {
-            "title": product_info["name"],
-            "image_url": product_info["image_url"],
-            "buttons": [
-                {
-                    "type": "web_url",
-                    "url": "https://bathangminh.myshopify.com/products/cape-dress-1",
-                    "title": "Xem chi tiết",
-                }
-            ]
-        }
-        elements.append(element)
+        events = []
+        object_types = list(
+            tracker.get_latest_entity_values(entity_type="object_type"))
+
+        if len(object_types) == 0:
+            product_id = tracker.get_slot("product_id")
+            product = get_product_by_id(product_id)
+
+        else:
+            events.append(SlotSet(key="object_type", value=object_types))
+            products = []
+            for object_value in object_types:
+                _products = search_products(product_type=object_value)
+                products.extend(_products)
+
+            product = products[0]
+
+        events.append(SlotSet("product_id", product.id))
         message = {
             "attachment": {
                 "type": "template",
                 "payload": {
                     "template_type": "generic",
-                    "elements": elements
+                    "elements": [product.to_info_element()]
                 }
             }
         }
-
-        dispatcher.utter_message(text="Dạ mình gửi thông tin sản phẩm chi tiết ạ:")
         dispatcher.utter_message(json_message=message)
 
-        return []
+        return events

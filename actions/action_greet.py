@@ -19,9 +19,9 @@ class ActionGreet(Action):
         events = []
 
         if greeted:
-            dispatcher.utter_message(template='utter_greet_1')
+            dispatcher.utter_message(response='utter_greet_1')
         else:
-            dispatcher.utter_message(template='utter_greet_0')
+            dispatcher.utter_message(response='utter_greet_0')
             events.append(SlotSet(key="greeted", value=True))
 
         return events

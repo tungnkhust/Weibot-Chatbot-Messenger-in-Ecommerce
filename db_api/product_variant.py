@@ -2,20 +2,28 @@ import json
 import shopify
 from db_api.config import API_KEY, API_VERSION, APP_PASSWORD, SHOP_URL
 from typing import Optional, Text, Union, List, Any
+from db_api.schema import Variant
+from db_api.product import get_product_by_id
 
 
 def search_product_variants(
-        product_id: int,
+        product_id: Text,
+        handle: Text = None,
         color: Optional[Union[Text, List[Text]]] = None,
         size: Optional[Union[Any, List[Any]]] = None,
         min_price: Optional[int] = None,
         max_price: Optional[int] = None,
 ):
     if isinstance(color, Text):
-        color = [color]
+        if color:
+            color = [color]
 
     if isinstance(size, List) is False:
-        size = [size]
+        if size:
+            size = [size]
+
+    if handle is None:
+        handle = get_product_by_id(product_id).handle
 
     with shopify.Session.temp(SHOP_URL, API_VERSION, APP_PASSWORD):
         response = shopify.GraphQL().execute(
@@ -48,11 +56,12 @@ def search_product_variants(
 
         to_removes = []
 
-        if color is not None:
+        if color:
+            color = [c.lower() for c in color]
             for (idx, variant) in enumerate(variants):
                 if variant["node"]["selectedOptions"][0][
                         "name"] == "Màu sắc" and variant["node"][
-                            "selectedOptions"][0]["value"] in color:
+                            "selectedOptions"][0]["value"].lower() in color:
                     pass
                 else:
                     to_removes.append(idx)
@@ -61,7 +70,8 @@ def search_product_variants(
 
             to_removes = []
 
-        if size is not None:
+        if size:
+            size = [s.upper() for s in size if isinstance(s, str)]
             for (idx, variant) in enumerate(variants):
                 if variant["node"]["selectedOptions"][1][
                         "name"] == "Kích cỡ" and variant["node"][
@@ -74,7 +84,7 @@ def search_product_variants(
 
             to_removes = []
 
-        if min_price is not None:
+        if min_price:
             for (idx, variant) in enumerate(variants):
                 if int(variant["node"]["price"]) >= min_price:
                     pass
@@ -85,7 +95,7 @@ def search_product_variants(
 
             to_removes = []
 
-        if max_price is not None:
+        if max_price:
             for (idx, variant) in enumerate(variants):
                 if int(variant["node"]["price"]) <= max_price:
                     pass
@@ -96,7 +106,12 @@ def search_product_variants(
 
             to_removes = []
 
-        return variants
+        _variants = []
+
+        for variant in variants:
+            _variants.append(Variant.from_dict(product_id=product_id, dict_info=variant, handle=handle))
+
+        return _variants
 
 
 def get_product_variant_by_id(variant_id):
