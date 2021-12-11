@@ -25,12 +25,12 @@ action_endpoint:
 #    password: <password used for authentication>
 #    use_ssl: <whether or not the communication is encrypted, default false>
 #
-#tracker_store:
-#    type: mongod
-#    url: mongodb://localhost:27017
-#    db: "rasa"
-#    username: "tungnk"
-#    password: "160199"
+tracker_store:
+   type: mongod
+   url: mongodb+srv://cluster0.ibd9d.mongodb.net
+   db: "rasa"
+   username: "tuantungdang"
+   password: "dangtuantung"
 
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers
