@@ -71,13 +71,12 @@ intents:
   - request_pay
   - ask_has_ship
   - ask_ship_fee
-  - ask_confirm_free_ship
   - ask_product_shop_sell
   - ask_shop_address
   - ask_shop_phone_number
   - ask_shop_website
   - ask_shop_name
-  - ask_shop_ecormerce
+  - ask_shop_ecommerce
   - ask_shop_bank_account
 
 entities:
@@ -166,6 +165,18 @@ slots:
     - type: from_entity
       entity: object_type
 
+  object_type_general:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  request_no_has:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: custom
+
 responses:
   utter_greet_0:
     - text: "Chào bạn, mình là Lily trợ lý ảo của shop. Mình có thể giúp gì cho bạn ạ."
@@ -226,10 +237,17 @@ responses:
     - text: "Dạ, mình vẫn độc thân vui tính né."
 
   utter_say_love:
-    - text: "Timi còn bé lắm, nên không biết yêu là gì đâu."
-    - text: "Timi còn bé lắm, bố mẹ ở nhà vẫn chưa cho yêu."
+    - text: "Ui, bạn tỏ tình mình à. Nhưng rất tiếc mình không nhận đâu."
+    - text: "Cậu nói gì đó, mình không nghe rõ, nói lớn nên đi. Ahihii"
+    - text: "Ừ, mình không yêu bạn."
+    - text: "Ahihi, lãng mạng quá."
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/ngaingung-1.png"
+    - text: "Ahihi, hạnh phúc quá"
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/ngaingung-1.png"
     - text: "Lãng mạng quá."
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/ngaingung-2.png"
     - text: "Hạnh phúc quá."
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/ngaingung-2.png"
 
   utter_love_together:
     - text: "Timi còn bé lắm, nên không biết yêu là gì đâu."
@@ -337,21 +355,52 @@ responses:
     - text: "Mình cũng đang đói nè, bạn có gì ăn không, mình ăn ké với nhé."
   utter_react_feel_thirsty:
     - text: "Uống một cốc nước lọc tinh khiết nhé bạn."
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/cool-water.jpg"
+    - text: "Uống một cốc nước lọc tinh khiết nhé bạn."
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/cool-water-1.jpg"
     - text: "Làm một cốc mát nha!"
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/cool-water-4.jpg"
     - text: "Hãy uống một cốc nước mát lành nha bạn."
-
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/cool-water-4.jpg"
   utter_react_feel_happy:
+    - text: "Bạn vui nên mình cũng thấy vui ạ"
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/happy-1.jpeg"
     - text: "Happy, happy"
-
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/happy-2.jpeg"
+    - text: "Mình cũng rất vui vì bạn hạnh phúc"
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/happy-3.jpg"
   utter_react_feel_lonely:
     - text: "Ở đâu đó có người đang mơ về nụ cười của bạn, ở đâu đó có người cảm thấy sự có mặt của bạn là đáng giá, vì vậy khi bạn đang cô đơn, buồn rầu và ủ rũ, hãy nhớ rằng có ai đó, ở đâu đó đang nghĩ về bạn."
     - text: "Nếu bạn thấy cô đơn thì nhớ tới Timi nhé, Lily luôn ở bên bận khi bạn cần."
   utter_react_feel_sleep:
+    - text: "Ly cafe hấp dẫn này có giúp bạn tỉnh ngủ hơn không nhỉ"
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/coffee-5.jpg"
     - text: "Bạn nghĩ sao về một cốc cafe sữa"
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/coffee-1.jpg"
     - text: "Một ly cafe sẽ làm bạn tỉnh táo hơn đó, nhưng đừng lạm dụng quá nhé."
+      image: "http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/coffee-3.jpeg"
     - text: "Cơn buồn ngủ chỉ là cảm giác nhất thời, đừng để nó đánh lừa nhé, đứng dậy và vươn vai vài cái nào."
 
   utter_react_feel_tired:
+    - text: Tìm một nơi yên bình và thư dãn nha bạn.
+      image: http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/khungcanh-1.jpg
+    - text: Một nơi yên bình sẽ giúp bạn thoải mái hơn, đến đó thử xem sao
+      image: http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/khungcanh-2.jpg
+    - text: Đến những nơi bình yên bạn sẽ thấy thư giãn hơn đó
+      image: http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/khungcanh-3.jpg
+
+    - text: Tại sao bạn không làm một chuyến du lịch để refresh bản thân nhỉ
+      image: http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/khungcanh-4.jpg
+
+    - text: Một nơi bình yên bạn thấy sao
+      image: http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/khungcanh-5.jpg
+
+    - text: Những nơi như này sẽ giúp bạn thoải mái hơn, tân hưởng nó nhé
+      image: http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/khungcanh-6.jpg
+
+    - text: Tìm một nơi yên bình để làm mới lại bản thân nhé
+      image: http://minio.dev.ftech.ai/va-fetch-v1.2.0-648c0c98/images/chitchats/khungcanh-7.jpg
+
     - text: "Nếu bạn cảm thấy mệt, hãy chọn một nơi yên tĩnh ngả lưng một chút nhé!"
     - text: "Công việc quá bận rộn đúng không bạn"
     - text: "Tìm một nơi yên bình và thư dãn nha bạn."
@@ -399,14 +448,36 @@ responses:
   utter_fall_back_1:
     - text: "Dạ, hiện tại mình không tìm thấy sản phẩm trong kho. Bạn lên đây để tìm thêm nhé: https://bathangminh.myshopify.com"
 
+  utter_request_type_pay:
+    - text: "Bạn muốn thanh toán online hay sau khi nhận hàng ạ"
+
   utter_has_ship:
-    - text: "Dạ bên mình có ship ạ"
+    - text: "Dạ shop có miễn phí ship trong bán kính 5km ạ\n. 
+            Ngoài phạm vi thì có bản giá ship sau ạ:\n
+              - Nội thành Hà Nội: 15K\n
+              - Ngoại thành Hà Nội: 30k\n
+              - Các tỉnh bán kính 200km: 50k\n
+              - Các tỉnh bán kính 300km: 70k\n
+              - Các tỉnh khác: 100k
+            "
 
   utter_ship_fee:
-    - text: "Dạ bạn xem bảng giá ship ạ"
+    - text: "Dạ shop mình có hỗ trợ miễn phí ship trong bán kính 5km ạ.
+            Ngoài phạm vi thì có bản giá ship sau ạ:\n
+              - Nội thành Hà Nội: 15K\n
+              - Ngoại thành Hà Nội: 30k\n
+              - Các tỉnh bán kính 200km: 50k\n
+              - Các tỉnh bán kính 300km: 70k\n
+              - Các tỉnh khác: 100k"
 
   utter_confirm_free_ship:
-    - text: "Dạ shop có miễn phí ship trong bán kính 5km ạ"
+    - text: "Dạ shop có miễn phí ship trong bán kính 5km ạ.
+            Ngoài phạm vi thì có bản giá ship sau ạ:\n
+              - Nội thành Hà Nội: 15K\n
+              - Ngoại thành Hà Nội: 30k\n
+              - Các tỉnh bán kính 200km: 50k\n
+              - Các tỉnh bán kính 300km: 70k\n
+              - Các tỉnh khác: 100k"
 
   utter_shop_address:
     - text: "Bạn có thể ghé thăm shop tại địa chỉ số 1 Đại Cồ Việt - Quận Hai Bà Trung - Hà Nội ạ"
@@ -415,7 +486,9 @@ responses:
     - text: "Bạn liên hệ với shop qua số sau nha: 086887888 hoặc 098786868"
 
   utter_shop_website:
-    - text: "Dạ bạn ghé thăm shop qua website sau để tìm hiểu thêm các sản phẩm ạ: https://bathangminh.myshopify.com/"
+    - text: "Dạ bạn ghé thăm shop qua các kệnh online sau ạ:\n
+            Website: https://bathangminh.myshopify.com/ \n
+            Facebook: https://www.facebook.com/profile.php?id=100073543977893"
 
   utter_shop_name:
     - text: "Shop mình tên Bathangminh nha bạn, bạn ghé thăm shop qua page facebook sau nhé: https://www.facebook.com/profile.php?id=100073543977893"
@@ -425,9 +498,11 @@ responses:
 
   utter_shop_bank_account:
     - text: "Dạ bạn có thể chuyển khoản qua số tài khoản sau ạ:\n
-            - STK: 01294098982324\n
-            - Ngân hàng:  Vietinbank chi nhánh Hai Bà Trưng\n
-            - Tên người nhận: Đăng Tuấn Tùng"
+            - STK: 1240201312626\n
+            - Ngân hàng:  Agriank chi nhánh Hoàng Mai\n
+            - Tên người nhận: Đăng Tuấn Tùng\n
+            - Hoặc Momo: 098786868
+            "
 
 actions:
   - action_greet
@@ -442,6 +517,7 @@ actions:
   - action_inform_product_info
   - action_inform_user_info
   - action_request_order
+  - action_suggest_product_by_entity
 
 session_config:
   session_expiration_time: 60

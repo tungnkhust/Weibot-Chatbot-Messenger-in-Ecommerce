@@ -317,3 +317,48 @@ rules:
     steps:
     - intent: ask_product_shop_sell
     - action: action_intro_product
+
+  - rule: ask_shop_address
+    steps:
+    - intent: ask_shop_address
+    - action: utter_shop_address
+
+  - rule: ask_shop_phone_number
+    steps:
+    - intent: ask_shop_phone_number
+    - action: utter_shop_phone_number
+
+  - rule: ask_shop_website
+    steps:
+    - intent: ask_shop_website
+    - action: utter_shop_website
+
+  - rule: ask_shop_name
+    steps:
+    - intent: ask_shop_name
+    - action: utter_shop_name
+
+  - rule: ask_shop_ecormerce
+    steps:
+    - intent: ask_shop_ecormerce
+    - action: utter_shop_ecormerce
+
+  - rule: ask_shop_bank_account
+    steps:
+    - intent: ask_shop_bank_account
+    - action: utter_shop_bank_account
+
+  - rule: request_pay
+    steps:
+    - intent: request_pay
+    - action: utter_request_type_pay
+
+  - rule: ask_has_ship
+    steps:
+    - intent: ask_has_ship
+    - action: utter_has_ship
+
+  - rule: ask_ship_fee
+    steps:
+    - intent: ask_ship_fee
+    - action: utter_ship_fee

@@ -1,6 +1,6 @@
 from typing import Any, Text, Dict, List
 
-from rasa_sdk import Action, Tracker
+from rasa_sdk import Action, Tracker, events
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from db_api.collection import get_collections
@@ -14,7 +14,27 @@ class ActionIntroProduct(Action):
     async def run(self, dispatcher: CollectingDispatcher,
                   tracker: Tracker,
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        events = []
+
+        object_types = list(tracker.get_latest_entity_values("object_type"))
+        if object_types:
+            return [
+                SlotSet("object_type", object_types),
+                events.FollowupAction("action_request_product")
+            ]
+
+        gender = list(tracker.get_latest_entity_values("gender"))
+        if gender:
+            return [
+                events.FollowupAction("action_suggest_product_by_entity")
+            ]
+
+        color = list(tracker.get_latest_entity_values("color"))
+        if color:
+            return [
+                events.FollowupAction("action_suggest_product_by_entity")
+            ]
+
+        event = []
         nodes = get_collections()
         products = []
         for node in nodes:
@@ -26,4 +46,5 @@ class ActionIntroProduct(Action):
         text += "- " + ", ".join(products[6:9]).strip(', ') + "\n"
         text += "- " + ", ".join(products[9:]).strip(', ')
         dispatcher.utter_message(text=text)
-        return events
+
+        return event

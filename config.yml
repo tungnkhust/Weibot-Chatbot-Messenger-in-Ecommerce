@@ -7,7 +7,7 @@ pipeline:
   - name: "CountVectorsFeaturizer"
   - name: "DIETClassifier"
     entity_recognition: True
-    epochs: 20
+    epochs: 7
     constrain_similarities: true
   - name: ResponseSelector
     epochs: 20

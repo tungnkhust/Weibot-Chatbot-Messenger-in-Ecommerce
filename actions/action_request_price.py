@@ -3,66 +3,100 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import SlotSet, FollowupAction
 
 from actions.utils.utils import get_product_by_object_type
-from db_api.product import get_product_by_id
+from db_api.product import get_product_by_id, search_products
 from db_api.product_variant import search_product_variants
+from db_api.schema import Product
 
 
-class ActionRequestImage(Action):
+class ActionRequestPrice(Action):
     def name(self) -> Text:
         return "action_request_price"
 
     async def run(self, dispatcher: CollectingDispatcher,
                   tracker: Tracker,
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        events = []
+        event = []
         product = None
-        object_type = list(tracker.get_latest_entity_values("object_type"))
-
-        if len(object_type) == 0:
-            product_id = tracker.get_slot("product_id")
-            if product_id is None:
-                dispatcher.utter_message(text="Bạn muốn xem sản phẩm nào ạ?")
-                return events
-            else:
-                product = get_product_by_id(product_id)
+        color = None
+        size = None
+        pre_product_id = tracker.get_slot("product_id")
+        if pre_product_id:
+            pre_product = get_product_by_id(pre_product_id)
         else:
-            products = [get_product_by_id(p_id) for p_id in tracker.get_slot("product_ids")]
-            product = get_product_by_object_type(object_type[0], products)
+            pre_product = None
 
-            events.append(SlotSet("object_type", object_type))
-            events.append(SlotSet("product_id", product.id))
+        object_types = list(tracker.get_latest_entity_values("object_type"))
+        colors = list(tracker.get_latest_entity_values("color"))
+        if colors:
+            color = colors[0]
+            event.append(SlotSet("color", color))
 
-        variants = search_product_variants(product_id=product.id)
+        sizes = list(tracker.get_latest_entity_values("size"))
+        if sizes:
+            size = sizes[0]
+            event.append(SlotSet("size", size))
+
+        if len(object_types) == 0:
+            if pre_product:
+                product = pre_product
+            else:
+                dispatcher.utter_message(text="Bạn muốn hỏi giá sản phẩm nào ạ")
+                return event
+        else:
+            # Nếu có object type kèm theo, kiểm tra xem có phải đang nhắc tới sản phẩm trước đó hay ko
+            object_type_level = Product.get_level_of_object_type(object_types[0])
+
+            if object_type_level > 0:
+                # Nếu có nhắc tới, thì trả về sp trước đó, còn nếu là object type chung chung mà không
+                # nhắc tới sp trước đó thì chuyển sang action request product
+                if pre_product and pre_product.check_is_general_of_product(object_types[0]):
+                    product = pre_product
+                else:
+                    dispatcher.utter_message(text="Bạn muốn hỏi giá sản phẩm nào ạ")
+                    return event
+            else:
+                # Nếu là một sp khác thì trả về sản phẩm tương ứng
+                products = search_products(product_type=object_types[0])
+                if products:
+                    product = products[0]
+                    event.append(SlotSet("object_type", object_types))
+                    event.append(SlotSet("product_id", product.id))
+
+                else:
+                    dispatcher.utter_message(text="Bạn muốn hỏi giá sản phẩm nào ạ")
+                    return event
+
+        if product is None:
+            dispatcher.utter_message(text="Bạn muốn hỏi giá sản phẩm nào ạ")
+            return event
+
+        variants = search_product_variants(product_id=product.id, size=size, color=color)
 
         if len(variants) == 0:
-            prices = []
-            _variants = search_product_variants(product_id=product.id)
-            for variant in _variants:
-                prices.extend(variant.price)
-            prices = list(set(prices))
-            if len(prices) == 0:
-                dispatcher.utter_message(response="utter_fall_back_1")
-            else:
-                prices_text = ", ".join(prices).strip(', ')
-                text = f"Dạ, Sản phẩm *{product.title}* bên mình đang có giá như sau: {prices_text} ạ"
-                dispatcher.utter_message(text=text)
+            dispatcher.utter_message(text="Bạn muốn hỏi giá sản phẩm nào ạ")
         else:
-            prices = []
-
+            elements = []
+            _colors = []
             for variant in variants:
-                prices.append(variant.price)
+                if variant.color not in _colors:
+                    elements.append(variant.to_messenger_element())
+                    _colors.append(variant.color)
 
-            prices = list(set(prices))
-
-            if len(prices) == 1:
-                prices_text = str(prices[0])
+            if elements:
+                message = {
+                    "attachment": {
+                        "type": "template",
+                        "payload": {
+                            "template_type": "generic",
+                            "elements": elements
+                        }
+                    }
+                }
+                dispatcher.utter_message(text=f"Sản phẩm {product.title} có giá theo màu sắc và kích thước như sau:")
+                dispatcher.utter_message(json_message=message)
             else:
-                prices_text = ", ".join(prices).strip(', ')
-
-            text = f"Dạ, Sản phẩm *{product.title}* bên mình đang có giá *{prices_text}* ạ"
-            dispatcher.utter_message(text=text)
-
-        return events
+                dispatcher.utter_message(text="Bạn muốn hỏi giá sản phẩm nào ạ")
+        return event
