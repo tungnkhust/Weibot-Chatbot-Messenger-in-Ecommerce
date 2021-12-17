@@ -78,6 +78,7 @@ intents:
   - ask_shop_name
   - ask_shop_ecommerce
   - ask_shop_bank_account
+  - ask_suitable_size
 
 entities:
   - color
@@ -85,18 +86,19 @@ entities:
   - price
   - size
   - gender
-
+  - mention
+  - name
+  - phone_number
+  - address
+  - ward
+  - district
+  - province
+  - email
 
 slots:
   greeted:
     type: bool
     initial_value: false
-    influence_conversation: false
-    mappings:
-      - type: custom
-
-  user_name:
-    type: text
     influence_conversation: false
     mappings:
       - type: custom
@@ -107,6 +109,12 @@ slots:
       - type: custom
 
   intent:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  system_act:
     type: text
     influence_conversation: false
     mappings:
@@ -126,6 +134,18 @@ slots:
 
   product_id:
     type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  variant_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  variant_ids:
+    type: list
     influence_conversation: false
     mappings:
       - type: custom
@@ -177,6 +197,73 @@ slots:
     mappings:
       - type: custom
 
+  is_ordering:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  confirmed_order:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  confirmed_checkout:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  user_name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: name
+
+  phone_number:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: phone_number
+
+  address:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: address
+
+  ward:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: ward
+
+  district:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: district
+
+  province:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: province
+
+  order_ids:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: province
+
 responses:
   utter_greet_0:
     - text: "Chào bạn, mình là Lily trợ lý ảo của shop. Mình có thể giúp gì cho bạn ạ."
@@ -189,6 +276,9 @@ responses:
 
   utter_thank_0:
     - text: "Dạ, cảm ơn bạn nhé!"
+
+  utter_can_help:
+    - text: "Bạn có cần hỗ trợ gì không ạ"
 
   utter_response_request_human:
     - text: "Dạ bạn có thể gọi qua số: 098765888 để được nhân viên bên mình tư vẫn trực tiếp ạ."
@@ -418,7 +508,6 @@ responses:
     - text: "Dạ, mình sẽ cố gắng học để tốt hơn"
     - text: "Mình biết mình không thông mình mà."
 
-
   utter_reply_react_repeated:
     - text: "Dạ, cho mình xin lỗi ạ"
     - text: "Dạ, xin lỗi vì đã làm phiền bạn ạ"
@@ -493,7 +582,7 @@ responses:
   utter_shop_name:
     - text: "Shop mình tên Bathangminh nha bạn, bạn ghé thăm shop qua page facebook sau nhé: https://www.facebook.com/profile.php?id=100073543977893"
 
-  utter_shop_ecormerce:
+  utter_shop_ecommerce:
     - text: "Dạ hiện tại shop chưa có cửa hàng trên các trang thương mại điện tử như shopee hoặc lazada ạ"
 
   utter_shop_bank_account:
@@ -504,7 +593,33 @@ responses:
             - Hoặc Momo: 098786868
             "
 
+forms:
+  product_order_form:
+    ignored_intents:
+    - request_info
+    - ask_product_shop_sell
+
+    required_slots:
+      - product_id
+      - color
+      - size
+
+  user_order_form:
+    ignored_intents:
+      - self_ask_like_film
+      - self_ask_like_sport
+
+    required_slots:
+      - user_name
+      - phone_number
+      - address
+      - district
+      - province
+
 actions:
+  - action_agree
+  - action_deny
+  - action_thank
   - action_greet
   - action_reset_slots
   - action_intro_product
@@ -518,6 +633,12 @@ actions:
   - action_inform_user_info
   - action_request_order
   - action_suggest_product_by_entity
+  - action_confirm_checkout
+  - action_ask_user_info
+  - action_ask_product_order_form_product_id
+  - action_request_user_info
+  - action_ask_suitable_size
+  - action_ask_pay
 
 session_config:
   session_expiration_time: 60

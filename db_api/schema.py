@@ -52,7 +52,7 @@ class Variant:
         }
 
     @classmethod
-    def from_dict(cls, product_id, dict_info: Dict, handle: Text = None):
+    def from_dict(cls, product_id=None, dict_info: Dict = None, handle: Text = None):
         if "node" in dict_info:
             variant_info = dict_info["node"]
         else:
@@ -95,7 +95,9 @@ class Variant:
     def to_messenger_element(self):
         element = {
             "title": self.display_name,
-            "subtitle": f"Size {self.size} - Giá: {int(self.price)}VND\n",
+            "subtitle": f"Màu: {self.color}\n"
+                        f"Size {self.size}\n"
+                        f"Giá: {int(self.price)}VND\n",
             "image_url": self.images[0],
             "buttons": [
                 {

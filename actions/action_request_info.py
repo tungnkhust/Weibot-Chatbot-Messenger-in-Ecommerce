@@ -17,7 +17,7 @@ class ActionRequestInfo(Action):
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         event = []
         product = None
-
+        event.append(SlotSet("intent", tracker.get_intent_of_latest_message()))
         pre_product_id = tracker.get_slot("product_id")
         if pre_product_id:
             pre_product = get_product_by_id(pre_product_id)

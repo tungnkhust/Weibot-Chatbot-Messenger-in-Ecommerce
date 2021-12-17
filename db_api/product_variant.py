@@ -2,7 +2,7 @@ import json
 import shopify
 from db_api.config import API_KEY, API_VERSION, APP_PASSWORD, SHOP_URL
 from typing import Optional, Text, Union, List, Any
-from db_api.schema import Variant
+from db_api.schema import Variant, Product
 from db_api.product import get_product_by_id
 
 
@@ -151,5 +151,8 @@ def get_product_variant_by_id(variant_id):
                 }
             }
             """, {"id": variant_id})
-
-        return json.loads(response)["data"]["productVariant"]
+        data = json.loads(response)["data"]["productVariant"]
+        product_id = data["product"]["id"]
+        handle = data["product"]["handle"]
+        variant = Variant.from_dict(product_id=product_id, dict_info=data, handle=handle)
+        return variant

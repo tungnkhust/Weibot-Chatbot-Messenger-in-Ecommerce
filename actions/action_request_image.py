@@ -20,7 +20,7 @@ class ActionRequestPrice(Action):
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         event = []
         product = None
-
+        event.append(SlotSet("intent", tracker.get_intent_of_latest_message()))
         object_types = list(tracker.get_latest_entity_values("object_type"))
         colors = list(tracker.get_latest_entity_values("color"))
 

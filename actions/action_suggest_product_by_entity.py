@@ -16,8 +16,8 @@ class ActionSuggestProductByEntity(Action):
                   tracker: Tracker,
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        event = []
-
+        event = list()
+        event.append(SlotSet("intent", tracker.get_intent_of_latest_message()))
         gender = list(tracker.get_latest_entity_values(entity_type="gender"))
         if len(set(gender)) != 1:
             gender = None

@@ -15,7 +15,7 @@ rules:
   - rule: thank
     steps:
     - intent: thank
-    - action: utter_thank_0
+    - action: action_thank
 
   - rule: request_human
     steps:
@@ -338,10 +338,10 @@ rules:
     - intent: ask_shop_name
     - action: utter_shop_name
 
-  - rule: ask_shop_ecormerce
+  - rule: ask_shop_ecommerce
     steps:
-    - intent: ask_shop_ecormerce
-    - action: utter_shop_ecormerce
+    - intent: ask_shop_ecommerce
+    - action: utter_shop_ecommerce
 
   - rule: ask_shop_bank_account
     steps:
@@ -362,3 +362,33 @@ rules:
     steps:
     - intent: ask_ship_fee
     - action: utter_ship_fee
+
+  - rule: agree
+    steps:
+    - intent: agree
+    - action: action_agree
+
+  - rule: deny
+    steps:
+      - intent: deny
+      - action: action_deny
+
+  - rule: rule 10
+    steps:
+      - intent: inform_product_info
+      - action: action_inform_product_info
+
+  - rule: rule 11
+    steps:
+      - intent: inform_user_info
+      - action: action_inform_user_info
+
+  - rule: rule 12
+    steps:
+      - intent: ask_suitable_size
+      - action: action_ask_suitable_size
+
+  - rule: request_order
+    steps:
+      - intent: request_order
+      - action: action_request_order

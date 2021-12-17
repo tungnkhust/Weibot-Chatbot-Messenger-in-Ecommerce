@@ -13,15 +13,15 @@ class ActionGreet(Action):
     async def run(self, dispatcher: CollectingDispatcher,
                   tracker: Tracker,
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        event = []
+        event.append(SlotSet("intent", tracker.get_intent_of_latest_message()))
 
         greeted = tracker.get_slot("greeted")
-
-        events = []
 
         if greeted:
             dispatcher.utter_message(response='utter_greet_1')
         else:
             dispatcher.utter_message(response='utter_greet_0')
-            events.append(SlotSet(key="greeted", value=True))
+            event.append(SlotSet(key="greeted", value=True))
 
-        return events
+        return event

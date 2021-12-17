@@ -18,7 +18,8 @@ class ActionRequestSize(Action):
     async def run(self, dispatcher: CollectingDispatcher,
                   tracker: Tracker,
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        event = []
+        event = list()
+        event.append(SlotSet("intent", tracker.get_intent_of_latest_message()))
         product = None
         color = None
         pre_product_id = tracker.get_slot("product_id")

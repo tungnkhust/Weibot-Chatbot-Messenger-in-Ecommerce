@@ -5,15 +5,16 @@ from db_api.config import API_KEY, API_VERSION, APP_PASSWORD, SHOP_URL
 
 
 def create_order(
-    email: Text,
-    address: Text,
-    city: Text,
-    province: Text,
-    country: Text,
-    zip: Text,
-    firstname: Text,
-    lastname: Text,
-    items: List[Dict[Text, int]],
+    phone_number: Text = None,
+    email: Text = None,
+    address: Text = None,
+    city: Text = None,
+    province: Text = None,
+    country: Text = None,
+    zip: Text = None,
+    firstname: Text = None,
+    lastname: Text = None,
+    items: List[Dict[Text, int]] = None,
 ):
     with shopify.Session.temp(SHOP_URL, API_VERSION, APP_PASSWORD):
         response = shopify.GraphQL().execute(

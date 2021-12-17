@@ -17,8 +17,8 @@ class ActionRequestProduct(Action):
                   tracker: Tracker,
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        event = []
-
+        event = list()
+        event.append(SlotSet("intent", tracker.get_intent_of_latest_message()))
         object_types = tracker.get_latest_entity_values(entity_type="object_type")
         object_types = list(object_types)
 
@@ -40,6 +40,11 @@ class ActionRequestProduct(Action):
         else:
             for object_value in object_types:
                 _products = search_products(product_type=object_value, gender=gender)
+                products.extend(_products)
+
+        if len(products) == 0 and len(object_types) > 0:
+            for object_value in object_types:
+                _products = search_products(product_type=object_value)
                 products.extend(_products)
 
         if len(products) == 0:

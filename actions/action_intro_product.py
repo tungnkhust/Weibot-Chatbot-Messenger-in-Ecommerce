@@ -14,6 +14,8 @@ class ActionIntroProduct(Action):
     async def run(self, dispatcher: CollectingDispatcher,
                   tracker: Tracker,
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        event = list()
+        event.append(SlotSet("intent", tracker.get_intent_of_latest_message()))
 
         object_types = list(tracker.get_latest_entity_values("object_type"))
         if object_types:
@@ -34,7 +36,6 @@ class ActionIntroProduct(Action):
                 events.FollowupAction("action_suggest_product_by_entity")
             ]
 
-        event = []
         nodes = get_collections()
         products = []
         for node in nodes:
