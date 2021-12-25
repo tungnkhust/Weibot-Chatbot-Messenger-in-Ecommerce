@@ -35,6 +35,7 @@ def create_order(
             variables={
                 "input": {
                     "email": email,
+                    "note": "chatbot",
                     "shippingAddress": {
                         "address1": address,
                         "city": city,
@@ -43,6 +44,7 @@ def create_order(
                         "zip": zip,
                         "firstName": firstname,
                         "lastName": lastname,
+                        "phone": phone_number,
                     },
                     "lineItems": items,
                 }
