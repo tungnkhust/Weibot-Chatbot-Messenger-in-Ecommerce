@@ -5,15 +5,6 @@ from db_api.config import API_KEY, API_VERSION, APP_PASSWORD, SHOP_URL
 
 
 def create_order(
-    phone_number: Text = None,
-    email: Text = None,
-    address: Text = None,
-    city: Text = None,
-    province: Text = None,
-    country: Text = None,
-    zip: Text = None,
-    firstname: Text = None,
-    lastname: Text = None,
     items: List[Dict[Text, int]] = None,
 ):
     with shopify.Session.temp(SHOP_URL, API_VERSION, APP_PASSWORD):
@@ -24,6 +15,7 @@ def create_order(
                 draftOrder {
                     # DraftOrder fields
                     id
+                    invoiceUrl
                 }
                 userErrors {
                     field
@@ -34,18 +26,7 @@ def create_order(
         """,
             variables={
                 "input": {
-                    "email": email,
                     "note": "chatbot",
-                    "shippingAddress": {
-                        "address1": address,
-                        "city": city,
-                        "province": province,
-                        "country": country,
-                        "zip": zip,
-                        "firstName": firstname,
-                        "lastName": lastname,
-                        "phone": phone_number,
-                    },
                     "lineItems": items,
                 }
             },

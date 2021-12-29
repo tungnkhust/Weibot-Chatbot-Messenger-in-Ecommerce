@@ -13,14 +13,6 @@ def test_get_products():
 if __name__ == "__main__":
     print(
         create_order(
-            email="dangnm@gmail.com",
-            address="48 Viwaseen",
-            city="Hanoi",
-            province="NamTuLiem",
-            country="Vietnam",
-            zip="100000",
-            firstname="Dang",
-            lastname="Nguyen",
             items=[
                 {
                     "variantId": "gid://shopify/ProductVariant/42093440598230",
