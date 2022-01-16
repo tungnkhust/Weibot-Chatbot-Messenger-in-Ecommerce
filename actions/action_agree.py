@@ -24,6 +24,7 @@ class ActionAgree(Action):
         event = []
 
         pre_system_act = tracker.get_slot("system_act")
+        print("pre_sys_action", pre_system_act)
         if pre_system_act == "action_request_order":
             event.append(SlotSet("confirmed_order", True))
             event.append(FollowupAction("action_request_order"))

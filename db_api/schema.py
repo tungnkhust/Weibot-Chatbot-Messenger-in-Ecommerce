@@ -118,6 +118,16 @@ class Variant:
             })
         return elements
 
+    def to_messenger_generic(self):
+        element = {
+            "title": self.display_name,
+            "subtitle": f"Màu: {self.color}\n"
+                        f"Size {self.size}\n"
+                        f"Giá: {int(self.price)}VND\n",
+            "image_url": self.images[0]
+        }
+        return element
+
 
 class Product:
     general_object_level_1 = ["quần", "giày", "chân váy", "váy", "áo"]

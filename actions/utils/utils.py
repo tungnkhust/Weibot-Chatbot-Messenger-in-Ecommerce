@@ -6,6 +6,23 @@ import re
 from db_api.schema import Product
 
 
+def check_in_list(element, elements, lower_case=True):
+    if isinstance(element, str) is False:
+        element = str(element)
+
+    elements = [str(e) for e in elements]
+
+    if lower_case:
+        elements = [e.lower() for e in elements]
+        if element.lower() in elements:
+            return True
+
+    if element in elements:
+        return True
+
+    return False
+
+
 def get_product_by_object_type(object_type, products: List[Product]):
     candidate_scores = {}
     for product in products:

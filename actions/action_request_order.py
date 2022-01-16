@@ -7,6 +7,21 @@ from db_api.product import search_products, get_product_by_id
 from db_api.product_variant import search_product_variants, get_product_variant_by_id
 from db_api.schema import Product
 from actions.utils.utils import get_generic_message
+from db_api.order import create_order
+
+from actions.utils.utils import check_in_list
+
+
+def get_draft_order(variant_ids):
+    items = []
+    for var_id in variant_ids:
+        items.append({
+            "variantId": var_id,
+            "quantity": 1
+        })
+    output = create_order(items)
+    order_url = output["data"]["draftOrderCreate"]["draftOrder"]["invoiceUrl"]
+    return order_url
 
 
 class ActionRequestOrder(Action):
@@ -81,9 +96,10 @@ class ActionRequestOrder(Action):
 
         event.append(SlotSet("color", color))
         event.append(SlotSet("size", size))
+        tracker.add_slots(event)
 
         if product_other:
-            dispatcher.utter_message(text="Có phải bạn hỏi mua sản phẩm này không ạ")
+            dispatcher.utter_message(text="Có phải bạn hỏi mua sản phẩm này đúng không ạ")
             message = get_generic_message([product.to_info_element()])
             dispatcher.utter_message(json_message=message)
             return event
@@ -95,13 +111,13 @@ class ActionRequestOrder(Action):
             elif size is None:
                 dispatcher.utter_message(text="Bạn muốn lấy size nào ạ")
             else:
-                if color not in product_colors:
+                if check_in_list(color, product_colors) is False:
                     product_colors_text = ", ".join(product_colors).strip(", ")
                     dispatcher.utter_message(text=f"Sản phẩm {product.title} không có màu *{color}* bạn chọn màu khác"
                                                   f" được không ạ: {product_colors_text}")
                     return event
 
-                if size not in product_sizes:
+                if check_in_list(size, product_sizes) is False:
                     product_sizes_text = ", ".join(product_sizes).strip(", ")
                     dispatcher.utter_message(text=f"Sản phẩm {product.title} không có size *{size}* bạn chọn size khác"
                                                   f" được không ạ: {product_sizes_text}")
@@ -115,22 +131,37 @@ class ActionRequestOrder(Action):
                                                   f"\nBạn chọn màu hoặc size khác giúp mình với ạ.")
                     return event
 
+                dispatcher.utter_message("Mình gửi danh sách sản phẩm bạn đặt mua:")
                 variant_ids = [variant.id for variant in variants]
-                event.append(SlotSet("variant_ids", variant_ids))
-                elements = [variant.to_messenger_element() for variant in variants]
-                message = get_generic_message(elements)
-
-                confirmed_order = tracker.get_slot("confirmed_order")
-
-                if confirmed_order:
-                    event.append(FollowupAction("action_request_user_info"))
-                    return event
-
-                elif confirmed_order is False:
-                    dispatcher.utter_message(text="Bạn báo lại thông tin sản phẩm cần mua với ạ")
-                    return event
-                dispatcher.utter_message(text="Mình gửi danh sách các sản phẩm bạn chọn. Bạn xác nhận giúp mình đúng"
-                                              " chưa ạ")
+                order_url = get_draft_order(variant_ids)
+                elements = [variant.to_messenger_generic() for variant in variants]
+                message = {
+                    "attachment": {
+                        "type": "template",
+                        "payload": {
+                            "template_type": "generic",
+                            "elements": elements
+                        }
+                    }
+                }
+                dispatcher.utter_message(json_message=message)
+                message = {
+                    "attachment": {
+                          "type": "template",
+                          "payload": {
+                                "template_type": "button",
+                                "text": "Ấn *Đặt Hàng* để mua",
+                                "buttons": [
+                                  {
+                                    "type": "web_url",
+                                    "url": order_url,
+                                    "title": "Đặt Hàng",
+                                    "webview_height_ratio": "full"
+                                  }
+                                ]
+                              }
+                        }
+                }
                 dispatcher.utter_message(json_message=message)
 
         return event

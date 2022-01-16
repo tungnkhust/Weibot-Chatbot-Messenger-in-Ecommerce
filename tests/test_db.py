@@ -26,4 +26,4 @@ if __name__ == "__main__":
     # print('-' * 50)
     # print(get_product_by_id("gid://shopify/Product/7461429575894"))
     # print(search_product_variants(product_id="gid://shopify/Product/7461449793750", color="trắng"))
-    # print(get_product_variant_by_id("gid://shopify/ProductVariant/42101616509142"))
+    print(get_product_variant_by_id("gid://shopify/ProductVariant/42093440598230"))
